@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { formatYearAndDate, formatTime } from './utils/format';
-import type { Blog, Repository } from './types';
+import type { Blog, BlogDetail, Repository } from './types';
 
 export async function getBlogList(): Promise<Blog[]> {
   const { data: response } = await axios.post('https://api.juejin.cn/content_api/v1/article/query_list', {
@@ -16,6 +16,26 @@ export async function getBlogList(): Promise<Blog[]> {
       time: formatYearAndDate(Number(item.article_info.ctime)),
     };
   });
+}
+
+export async function getBlogDetail(id: string): Promise<BlogDetail> {
+  const { data: response } = await axios.post('https://api.juejin.cn/content_api/v1/article/detail', {
+    article_id: id,
+  });
+  const { article_info: article } = response.data;
+
+  return {
+    id: article.article_id,
+    title: article.title,
+    description: article.brief_content,
+    content: article.mark_content,
+    count: {
+      view: article.view_count,
+      favorite: article.collect_count,
+      like: article.digg_count,
+      comment: article.comment_count,
+    },
+  };
 }
 
 export async function getRepositoryList(): Promise<Repository[]> {

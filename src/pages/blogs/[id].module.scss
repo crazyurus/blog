@@ -1,0 +1,108 @@
+.content {
+  p {
+    margin: 16px 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 24px 0 16px;
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  a {
+    color: theme('colors.green');
+
+    &:hover {
+      color: theme('colors.black');
+      background-color: theme('colors.green');
+    }
+  }
+
+  pre {
+    border: 1px dashed theme('colors.gray');
+    border-radius: 8px;
+    padding: 8px 12px;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+
+  p code {
+    color: theme('colors.black');
+    background-color: theme('colors.gray');
+    padding: 2px 4px;
+    border-radius: 2px;
+  }
+
+  table {
+    border: 1px dashed theme('colors.gray');
+    border-radius: 8px;
+    border-collapse: separate;
+    width: 100%;
+
+    th {
+      font-weight: bold;
+    }
+
+    th,
+    td {
+      padding: 4px;
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 16px;
+  }
+
+  ul {
+    list-style: disc;
+
+    ul {
+      list-style: circle;
+    }
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin: 8px 0;
+  }
+
+  blockquote {
+    font-style: italic;
+  }
+}
+
+.footer {
+  margin-top: 48px;
+  display: flex;
+  justify-content: space-between;
+
+  code {
+    color: theme('colors.yellow');
+  }
+
+  a {
+    color: theme('colors.green');
+
+    &:hover {
+      color: theme('colors.black');
+      background-color: theme('colors.green');
+    }
+  }
+}

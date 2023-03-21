@@ -11,9 +11,10 @@ module.exports = {
         black: '#000',
         white: '#fff',
         green: '#00d900',
-        blue: '#00e5e6',
-        yellow: '#e5e600',
-        gray: '#e5e6e6',
+        blue: '#00e6e6',
+        yellow: '#e6e600',
+        gray: '#e6e6e6',
+        pink: '#e600e6'
       },
     },
   },

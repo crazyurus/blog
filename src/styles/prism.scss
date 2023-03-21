@@ -1,0 +1,30 @@
+.remark-highlight {
+  .keyword,
+  .property,
+  .atrule {
+    color: theme('colors.blue');
+  }
+
+  .string,
+  .attr-value {
+    color: theme('colors.green');
+  }
+
+  .class-name,
+  .function,
+  .builtin {
+    color: theme('colors.yellow');
+  }
+
+  .attr-name {
+    color: theme('colors.pink');
+  }
+
+  .attr-equals {
+    color: theme('colors.white');
+  }
+
+  .comment {
+    color: theme('colors.gray');
+  }
+}

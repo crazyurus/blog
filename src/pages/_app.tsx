@@ -6,6 +6,7 @@ import Layout from '../layouts/Basic';
 import { initBackground } from '../utils/background';
 import '../styles/global.scss';
 import '../styles/canvas.scss';
+import '../styles/prism.scss';
 
 const defaultTitle = 'Crazy Urus';
 
