@@ -1,6 +1,6 @@
-# 个人主页
+# 个人网站
 
-这是一个基于 `Next.js` 创建的个人主页，使用服务端渲染（SSR）
+这是一个基于 `Next.js` 创建的个人网站，使用了服务端渲染（SSR）
 
 https://crazyurus.vercel.app/
 
