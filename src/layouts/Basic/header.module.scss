@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: dashed 1px theme('colors.gray');
+  border-bottom: dashed 1px theme('colors.gray');
+  margin-bottom: 24px;
+  padding: 12px 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  gap: 16px;
+  line-height: 2;
+
+  div:hover {
+    cursor: pointer;
+    color: theme('colors.black');
+    background-color: theme('colors.white');
+  }
+}

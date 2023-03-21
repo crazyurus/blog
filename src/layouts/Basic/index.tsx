@@ -1,11 +1,20 @@
 import React, { type PropsWithChildren } from 'react';
+import Header from './header';
+import Footer from './footer';
 import styles from './index.module.scss';
 
-function Layout(props: PropsWithChildren): JSX.Element {
+interface Props {
+  title: string;
+}
+
+function Layout(props: PropsWithChildren<Props>): JSX.Element {
+  const { title, children } = props;
+
   return (
     <div className={styles.layout}>
-      <header>React App with Next.js</header>
-      <main>{props.children}</main>
+      <Header title={title} />
+      <main className={styles.content}>{children}</main>
+      <Footer />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import '../styles/global.scss';
 
-const defaultTitle = 'React App with Next.js';
+const defaultTitle = 'Crazy Urus';
 
 type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: JSX.Element, props: P) => JSX.Element;
@@ -19,7 +19,9 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function getDefaultLayout(page: JSX.Element, pageProps: any): JSX.Element {
-  return <Layout>{page}</Layout>;
+  const { title = defaultTitle } = pageProps;
+
+  return <Layout title={title}>{page}</Layout>;
 }
 
 function App({ Component, pageProps }: AppPropsWithLayout) {

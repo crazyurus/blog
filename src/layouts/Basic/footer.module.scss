@@ -1,0 +1,13 @@
+.footer {
+  border-top: 1px dashed theme('colors.gray');
+  margin: 20px auto 16px;
+  padding-top: 8px;
+  text-align: right;
+}
+
+.contact {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}

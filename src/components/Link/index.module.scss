@@ -1,3 +1,14 @@
 .link {
-  color: #61dafb;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+
+  span {
+    color: theme('colors.blue');
+  }
+
+  &:hover > span {
+    color: theme('colors.black');
+    background-color: theme('colors.green');
+  }
 }

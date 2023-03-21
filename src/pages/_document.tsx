@@ -6,7 +6,7 @@ function Document(): JSX.Element {
       <Head>
         <meta charSet="utf-8" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#4f46e5" />
+        <meta name="theme-color" content="#000" />
       </Head>
       <body>
         <Main />

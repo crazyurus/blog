@@ -1,15 +1,22 @@
 import React from 'react';
-import { Logo, Link } from '../components';
+import logo from './logo.txt';
 import styles from './index.module.scss';
 
 function Home(): JSX.Element {
   return (
-    <div className={styles.container}>
-      <Logo />
-      <p>
-        Edit <code>src/pages/index.tsx</code> and save to reload.
-      </p>
-      <Link url="https://nextjs.org">Learn Next.js</Link>
+    <div>
+      <pre className={styles.logo}>{logo}</pre>
+      <div className={styles.content}>
+        <p>我是 Crazy Urus，现就职于字节跳动，坐标武汉</p>
+        <p>这是我的个人主页，于 2023 年 3 月 21 日创建，内容还在建设中</p>
+        <p>
+          你可以点击「导航栏」的 <strong>blogs</strong> 查看我的技术文章，<strong>repositories</strong>{' '}
+          查看我参与的开源项目
+        </p>
+        <p>
+          你可以点击「底部链接」在 <strong>GitHub</strong>、<strong>掘金</strong> 和 <strong>知乎</strong> 找到我
+        </p>
+      </div>
     </div>
   );
 }
