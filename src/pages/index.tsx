@@ -7,8 +7,14 @@ function Home(): JSX.Element {
     <div>
       <pre className={styles.logo}>{logo}</pre>
       <div className={styles.content}>
-        <p>我是 Crazy Urus，现就职于字节跳动，坐标武汉</p>
-        <p>这是我的个人主页，于 2023 年 3 月 21 日创建，内容还在建设中</p>
+        <p>
+          我是 <strong>Crazy Urus</strong>，毕业于「武汉理工大学」，现就职于「字节跳动」飞书团队，坐标「武汉」
+        </p>
+        <p>
+          我对 <strong>React</strong>、<strong>小程序</strong>、<strong>低代码平台</strong>、<strong>开发工具链</strong>{' '}
+          和 <strong>Web 安全</strong> 等领域感兴趣
+        </p>
+        <p>这是我的个人主页，内容还在建设中</p>
         <p>
           你可以点击「导航栏」的 <strong>blogs</strong> 查看我的技术文章，<strong>repositories</strong>{' '}
           查看我参与的开源项目
