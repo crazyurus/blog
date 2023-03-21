@@ -18,8 +18,7 @@
   gap: 16px;
   line-height: 2;
 
-  div:hover {
-    cursor: pointer;
+  a:hover {
     color: theme('colors.black');
     background-color: theme('colors.white');
   }
