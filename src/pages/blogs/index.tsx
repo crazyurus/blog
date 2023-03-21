@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import { getBlogList } from '../../service';
 import type { Blog } from '../../types';
@@ -13,7 +13,7 @@ function BlogList(props: Props): JSX.Element {
   const { blogs } = props;
 
   return (
-    <>
+    <Fragment>
       {Object.entries(blogs)
         .reverse()
         .map(([year, blogs]) => (
@@ -33,7 +33,7 @@ function BlogList(props: Props): JSX.Element {
             </ol>
           </div>
         ))}
-    </>
+    </Fragment>
   );
 }
 

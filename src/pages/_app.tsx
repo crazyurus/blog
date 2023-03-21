@@ -1,9 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import Head from 'next/head';
-import Layout from '../layouts/Basic';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import Layout from '../layouts/Basic';
+import { initBackground } from '../utils/background';
 import '../styles/global.scss';
+import '../styles/canvas.scss';
 
 const defaultTitle = 'Crazy Urus';
 
@@ -28,6 +30,8 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   const { title = defaultTitle } = pageProps;
   const getLayout = Component.getLayout ?? getDefaultLayout;
 
+  useEffect(initBackground, []);
+
   return (
     <Fragment>
       <Head>
@@ -38,6 +42,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
         />
       </Head>
       {getLayout(<Component {...pageProps} />, pageProps)}
+      <canvas id="canvas" />
     </Fragment>
   );
 }
