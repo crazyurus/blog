@@ -8,6 +8,7 @@ https://crazyurus.vercel.app/
 
 - 博客：数据来源于掘金
 - 仓库：数据来源于 GitHub
+- 音乐：数据来源于网易云音乐
 
 ## 可用脚本
 
