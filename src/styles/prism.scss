@@ -27,4 +27,9 @@
   .comment {
     color: theme('colors.gray');
   }
+
+  .boolean,
+  .number {
+    color: theme('colors.pink');
+  }
 }
