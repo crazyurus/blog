@@ -53,9 +53,17 @@ export async function getRepositoryList(): Promise<Repository[]> {
 }
 
 export async function getMusicList(): Promise<Music[]> {
-  const { data: response } = await axios.get('https://music.163.com/api/v6/playlist/detail?id=7195401164&n=1000');
+  const { data: playlistResponse } = await axios.get(
+    'https://music.163.com/api/v6/playlist/detail?id=7195401164&n=1000'
+  );
+  const musicIDs = playlistResponse.playlist.trackIds.map((track: any) => ({
+    id: track.id,
+  }));
+  const { data: songResponse } = await axios.get(
+    'https://music.163.com/api/v3/song/detail?c=' + JSON.stringify(musicIDs)
+  );
 
-  return response.playlist.tracks.map((item: any) => {
+  return songResponse.songs.map((item: any) => {
     return {
       id: item.id,
       name: item.name,
