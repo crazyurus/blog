@@ -2,8 +2,10 @@ import React, { useEffect, Fragment } from 'react';
 import Head from 'next/head';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
+import NextProgress from 'next-progress';
 import Layout from '../layouts/Basic';
 import { initBackground } from '../utils/background';
+import colors from '../../constants/colors';
 import '../styles/global.scss';
 import '../styles/canvas.scss';
 import '../styles/prism.scss';
@@ -42,6 +44,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
           content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover"
         />
       </Head>
+      <NextProgress color={colors.green} />
       {getLayout(<Component {...pageProps} />, pageProps)}
       <canvas id="canvas" />
     </Fragment>

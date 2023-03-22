@@ -1,3 +1,5 @@
+import colors from '../../constants/colors';
+
 export function initBackground() {
   let canvas = document.getElementById('canvas') as HTMLCanvasElement;
   let context = canvas.getContext('2d')!;
@@ -23,7 +25,7 @@ export function initBackground() {
   function draw() {
     context.fillStyle = 'rgba(0, 0, 0, 0.05)';
     context.fillRect(0, 0, width, height);
-    context.fillStyle = '#00d900';
+    context.fillStyle = colors.green;
     context.font = `${font}px`;
     for (let i = 0; i < cols; ++i) {
       let txt = matrix[Math.floor(Math.random() * matrixSize)];
