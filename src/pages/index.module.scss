@@ -9,13 +9,13 @@
 
 .content {
   line-height: 2;
-}
 
-.link {
-  color: theme('colors.green');
+  a {
+    color: theme('colors.green');
 
-  &:hover {
-    color: theme('colors.black');
-    background-color: theme('colors.green');
+    &:hover {
+      color: theme('colors.black');
+      background-color: theme('colors.green');
+    }
   }
 }

@@ -22,6 +22,13 @@ function Home(): JSX.Element {
         <p>
           你可以点击「底部链接」在 <strong>GitHub</strong>、<strong>掘金</strong> 和 <strong>知乎</strong> 找到我
         </p>
+        <p>&nbsp;</p>
+        <p className="italic">
+          这个项目基于 Next.js 开发，代码仓库在这里{' '}
+          <a href="https://github.com/crazyurus/blog" target="_blank">
+            crazyurus/blog
+          </a>
+        </p>
       </div>
     </div>
   );
