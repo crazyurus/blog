@@ -9,6 +9,7 @@ interface Props {
 
 function Header(props: Props): JSX.Element {
   const { title } = props;
+  const neteaseMusicPlaylistID = process.env.NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID;
 
   return (
     <header className={styles.header}>
@@ -19,7 +20,7 @@ function Header(props: Props): JSX.Element {
         <Link href="/">/home</Link>
         <Link href="/blogs">/blogs</Link>
         <Link href="/repositories">/repositories</Link>
-        <Link href="/music">/music</Link>
+        {neteaseMusicPlaylistID && <Link href="/music">/music</Link>}
       </div>
     </header>
   );

@@ -10,6 +10,16 @@ https://crazyurus.vercel.app/
 - 仓库：数据来源于 GitHub
 - 音乐：数据来源于网易云音乐
 
+## 配置
+
+你可以通过修改 `.env` 文件更改配置
+
+- `NEXT_PUBLIC_DEFAULT_TITLE` 站点默认标题
+- `NEXT_PUBLIC_GITHUB_USERNAME` GitHub 用户名
+- `NEXT_PUBLIC_JUEJIN_ID` 掘金用户 ID
+- `NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID` （可选）网易云音乐歌单 ID
+- `NEXT_PUBLIC_ZHIHU_USERNAME` （可选）知乎用户名
+
 ## 可用脚本
 
 在这个项目中，你可以使用：

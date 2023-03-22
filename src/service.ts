@@ -3,8 +3,9 @@ import { formatYearAndDate, formatTime } from './utils/format';
 import type { Blog, BlogDetail, Repository, Music } from './types';
 
 export async function getBlogList(): Promise<Blog[]> {
+  const { NEXT_PUBLIC_JUEJIN_USERID: userID } = process.env;
   const { data: response } = await axios.post('https://api.juejin.cn/content_api/v1/article/query_list', {
-    user_id: '3438928100072813',
+    user_id: userID,
     sort_type: 2,
     cursor: '0',
   });
@@ -39,7 +40,8 @@ export async function getBlogDetail(id: string): Promise<BlogDetail> {
 }
 
 export async function getRepositoryList(): Promise<Repository[]> {
-  const { data: response } = await axios.get('https://api.github.com/users/crazyurus/repos?sort=pushed&per_page=100');
+  const { NEXT_PUBLIC_GITHUB_USERNAME: userName } = process.env;
+  const { data: response } = await axios.get(`https://api.github.com/users/${userName}/repos?sort=pushed&per_page=100`);
 
   return response.map((item: any) => {
     return {
@@ -53,8 +55,9 @@ export async function getRepositoryList(): Promise<Repository[]> {
 }
 
 export async function getMusicList(): Promise<Music[]> {
+  const { NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID: playlistID } = process.env;
   const { data: playlistResponse } = await axios.get(
-    'https://music.163.com/api/v6/playlist/detail?id=7195401164&n=1000'
+    `https://music.163.com/api/v6/playlist/detail?id=${playlistID}&n=1000`
   );
   const musicIDs = playlistResponse.playlist.trackIds.map((track: any) => ({
     id: track.id,

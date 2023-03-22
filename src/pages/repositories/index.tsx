@@ -36,10 +36,11 @@ function RepositoryList(props: Props): JSX.Element {
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
   const repositories = await getRepositoryList();
+  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
 
   return {
     props: {
-      title: 'Crazy Urus repositories',
+      title: `${defaultTitle} repositories`,
       repositories,
     },
   };

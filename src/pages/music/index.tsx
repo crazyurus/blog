@@ -34,10 +34,11 @@ function MusicList(props: Props): JSX.Element {
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
   const music = await getMusicList();
+  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
 
   return {
     props: {
-      title: 'Crazy Urus music',
+      title: `${defaultTitle} music`,
       music,
     },
   };

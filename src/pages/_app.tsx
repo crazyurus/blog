@@ -8,7 +8,7 @@ import '../styles/global.scss';
 import '../styles/canvas.scss';
 import '../styles/prism.scss';
 
-const defaultTitle = 'Crazy Urus';
+const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
 type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: JSX.Element, props: P) => JSX.Element;
