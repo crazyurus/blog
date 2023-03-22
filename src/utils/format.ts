@@ -12,6 +12,6 @@ export function formatYearAndDate(timestamp: number): {
   };
 }
 
-export function formatTime(time: string): string {
+export function formatTime(time: string | number): string {
   return dayjs(time).format('YYYY-MM-DD');
 }

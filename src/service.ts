@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { formatYearAndDate, formatTime } from './utils/format';
-import type { Blog, BlogDetail, Repository } from './types';
+import type { Blog, BlogDetail, Repository, Music } from './types';
 
 export async function getBlogList(): Promise<Blog[]> {
   const { data: response } = await axios.post('https://api.juejin.cn/content_api/v1/article/query_list', {
@@ -48,6 +48,19 @@ export async function getRepositoryList(): Promise<Repository[]> {
       description: item.description,
       time: formatTime(item.pushed_at),
       url: item.html_url,
+    };
+  });
+}
+
+export async function getMusicList(): Promise<Music[]> {
+  const { data: response } = await axios.get('https://music.163.com/api/v6/playlist/detail?id=7195401164&n=1000');
+
+  return response.playlist.tracks.map((item: any) => {
+    return {
+      id: item.id,
+      name: item.name,
+      author: item.ar.map((r: any) => r.name),
+      time: formatTime(item.publishTime),
     };
   });
 }

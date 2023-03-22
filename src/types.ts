@@ -27,3 +27,10 @@ export interface Repository {
   time: string;
   url: string;
 }
+
+export interface Music {
+  id: string;
+  name: string;
+  author: string[];
+  time: string;
+}
