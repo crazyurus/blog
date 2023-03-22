@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: theme('colors.white');
   background-color: theme('colors.black');
+  overflow-y: overlay;
 }
 
 ::selection {
