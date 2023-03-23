@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "Web site created using Next.js",
+  "license": "GPL-3.0",
   "scripts": {
     "prepare": "husky install",
     "start": "next dev",
