@@ -12,8 +12,15 @@ body {
   color: theme('colors.white');
   background-color: theme('colors.black');
   overflow-y: overlay;
+  cursor: text;
 }
 
-::selection {
+::selection,
+a::selection {
   background-color: theme('colors.green');
+  color: theme('colors.black');
+}
+
+a {
+  cursor: pointer;
 }

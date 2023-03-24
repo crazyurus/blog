@@ -5,7 +5,9 @@ import styles from './index.module.scss';
 function Home(): JSX.Element {
   return (
     <div>
-      <pre className={styles.logo}>{logo}</pre>
+      <pre className={styles.logo} contentEditable={false}>
+        {logo}
+      </pre>
       <div className={styles.content}>
         <p>
           我是 <strong>Crazy Urus</strong>，毕业于「武汉理工大学」，现就职于「字节跳动」飞书团队，坐标「武汉」

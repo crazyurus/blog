@@ -13,7 +13,9 @@ function Layout(props: PropsWithChildren<Props>): JSX.Element {
   return (
     <div className={styles.layout}>
       <Header title={title} />
-      <main className={styles.content}>{children}</main>
+      <main className={styles.content} contentEditable>
+        {children}
+      </main>
       <Footer />
     </div>
   );

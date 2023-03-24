@@ -9,4 +9,7 @@
 
 .content {
   min-height: calc(100vh - 221px);
+  outline: none;
+  caret-color: theme('colors.green');
+  caret-shape: underscore;
 }
