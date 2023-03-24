@@ -10,6 +10,7 @@ interface Props {
 
 function RepositoryList(props: Props): JSX.Element {
   const { repositories } = props;
+  let total = 1;
 
   return (
     <Fragment>
@@ -20,7 +21,7 @@ function RepositoryList(props: Props): JSX.Element {
             <div className={styles.title}>
               {year} ({repositories.length})
             </div>
-            <ol className={styles.list}>
+            <ol className={styles.list} start={(total += repositories.length) - repositories.length}>
               {repositories.map(repository => (
                 <li key={repository.id}>
                   <div className={styles.repository}>

@@ -11,6 +11,7 @@ interface Props {
 
 function BlogList(props: Props): JSX.Element {
   const { blogs } = props;
+  let total = 1;
 
   return (
     <Fragment>
@@ -21,7 +22,7 @@ function BlogList(props: Props): JSX.Element {
             <div className={styles.title}>
               {year} ({blogs.length})
             </div>
-            <ol className={styles.list}>
+            <ol className={styles.list} start={(total += blogs.length) - blogs.length}>
               {blogs.map(blog => (
                 <li key={blog.id}>
                   <div className={styles.blog}>
