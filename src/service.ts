@@ -41,14 +41,16 @@ export async function getBlogDetail(id: string): Promise<BlogDetail> {
 
 export async function getRepositoryList(): Promise<Repository[]> {
   const { NEXT_PUBLIC_GITHUB_USERNAME: userName } = process.env;
-  const { data: response } = await axios.get(`https://api.github.com/users/${userName}/repos?sort=pushed&per_page=100`);
+  const { data: response } = await axios.get(
+    `https://api.github.com/users/${userName}/repos?sort=created&per_page=100`
+  );
 
   return response.map((item: any) => {
     return {
       id: item.id,
       name: item.name,
       description: item.description,
-      time: formatTime(item.pushed_at),
+      time: formatYearAndDate(item.created_at),
       url: item.html_url,
     };
   });

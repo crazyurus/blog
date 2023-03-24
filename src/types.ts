@@ -1,10 +1,12 @@
+interface Time {
+  year: number;
+  date: string;
+}
+
 export interface Blog {
   id: string;
   title: string;
-  time: {
-    year: number;
-    date: string;
-  };
+  time: Time;
 }
 
 export interface BlogDetail {
@@ -24,7 +26,7 @@ export interface Repository {
   id: number;
   name: string;
   description: string;
-  time: string;
+  time: Time;
   url: string;
 }
 

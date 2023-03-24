@@ -1,10 +1,11 @@
 import dayjs from 'dayjs';
 
-export function formatYearAndDate(timestamp: number): {
+export function formatYearAndDate(timestamp: number | string): {
   year: number;
   date: string;
 } {
-  const time = dayjs(timestamp * 1000);
+  const value = typeof timestamp === 'string' ? timestamp : timestamp * 1000;
+  const time = dayjs(value);
 
   return {
     year: time.year(),
