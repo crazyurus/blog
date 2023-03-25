@@ -36,3 +36,8 @@ export interface Music {
   author: string[];
   time: string;
 }
+
+export interface Friend {
+  name: string;
+  url: string;
+}
