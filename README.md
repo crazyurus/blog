@@ -2,7 +2,7 @@
 
 这是一个基于 `Next.js` 创建的个人网站，使用了服务端渲染（SSR）
 
-https://crazyurus.vercel.app/
+https://crazyurus.cn
 
 ## 主要功能
 
