@@ -8,6 +8,7 @@
 }
 
 .content {
+  display: block;
   line-height: 2;
 
   a {
@@ -17,5 +18,9 @@
       color: theme('colors.black');
       background-color: theme('colors.green');
     }
+  }
+
+  p {
+    display: inline-block;
   }
 }

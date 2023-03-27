@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-size: 14px;
-  font-family: Consolas, "Microsoft YaHei", monospace;
+  font-family: Consolas, 'Microsoft YaHei', monospace;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -19,4 +19,9 @@ body {
 a::selection {
   background-color: theme('colors.green');
   color: theme('colors.black');
+}
+
+:root {
+  --ti-cursor-color: theme('colors.green');
+  --ti-cursor-font-weight: 900;
 }
