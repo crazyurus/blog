@@ -20,6 +20,8 @@ https://crazyurus.cn
 - `NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID` （可选）网易云音乐歌单 ID
 - `NEXT_PUBLIC_ZHIHU_USERNAME` （可选）知乎用户名
 
+你可以通过修改 `constants/friend.js` 文件配置友情链接
+
 ## 可用脚本
 
 在这个项目中，你可以使用：
