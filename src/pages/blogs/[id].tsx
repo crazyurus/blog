@@ -15,10 +15,19 @@ interface Props {
 
 function BlogDetail(props: Props): JSX.Element {
   const { detail } = props;
+  const JuejinUserID = process.env.NEXT_PUBLIC_JUEJIN_USERID;
+  const isSelf = JuejinUserID === detail.author.id;
+  const content = isSelf ? (
+    <div className={styles.content} dangerouslySetInnerHTML={{ __html: detail.content }} />
+  ) : (
+    <div className={styles.content}>
+      这篇文章的作者是 <strong>{detail.author.name}</strong> 不属于本站，请点击下方的「查看原文」阅读
+    </div>
+  );
 
   return (
     <Fragment>
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: detail.content }} />
+      {content}
       <div className={styles.footer}>
         <a href={`https://juejin.cn/post/${detail.id}`} target="_blank">
           查看原文

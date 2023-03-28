@@ -5,7 +5,7 @@ import styles from './footer.module.scss';
 function Footer(): JSX.Element {
   const year = new Date().getFullYear();
   const GitHubUserName = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
-  const JuejinUserID = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+  const JuejinUserID = process.env.NEXT_PUBLIC_JUEJIN_USERID;
   const ZhihuUserName = process.env.NEXT_PUBLIC_ZHIHU_USERNAME;
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 

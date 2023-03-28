@@ -23,13 +23,17 @@ export async function getBlogDetail(id: string): Promise<BlogDetail> {
   const { data: response } = await axios.post('https://api.juejin.cn/content_api/v1/article/detail', {
     article_id: id,
   });
-  const { article_info: article } = response.data;
+  const { article_info: article, author_user_info: author } = response.data;
 
   return {
     id: article.article_id,
     title: article.title,
     description: article.brief_content,
     content: article.mark_content,
+    author: {
+      id: author.user_id,
+      name: author.user_name,
+    },
     count: {
       view: article.view_count,
       favorite: article.collect_count,

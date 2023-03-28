@@ -14,6 +14,10 @@ export interface BlogDetail {
   title: string;
   description: string;
   content: string;
+  author: {
+    id: string;
+    name: string;
+  };
   count: {
     view: number;
     favorite: number;
