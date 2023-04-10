@@ -29,7 +29,7 @@ function BlogDetail(props: Props): JSX.Element {
     <Fragment>
       {content}
       <div className={styles.footer}>
-        <a href={`https://juejin.cn/post/${detail.id}`} target="_blank">
+        <a href={`https://juejin.cn/post/${detail.id}`} target="_blank" rel="noopener noreferrer">
           查看原文
         </a>
         <span>
@@ -56,9 +56,9 @@ export async function getServerSideProps(context: GetServerSidePropsContext): Pr
       title: detail.title,
       detail: {
         ...detail,
-        content: String(content),
-      },
-    },
+        content: String(content)
+      }
+    }
   };
 }
 

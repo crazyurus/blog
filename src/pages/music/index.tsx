@@ -18,7 +18,12 @@ function MusicList(props: Props): JSX.Element {
           <li key={item.id}>
             <div className={styles.music}>
               <span className="flex-shrink-0">{item.time}</span>
-              <a className="flex-shrink-0" href={`https://music.163.com/#/song?id=${item.id}`} target="_blank">
+              <a
+                className="flex-shrink-0"
+                href={`https://music.163.com/#/song?id=${item.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {item.name}
               </a>
               <span className="flex-grow text-ellipsis whitespace-nowrap overflow-hidden">
@@ -39,8 +44,8 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
   return {
     props: {
       title: `${defaultTitle} music`,
-      music,
-    },
+      music
+    }
   };
 }
 

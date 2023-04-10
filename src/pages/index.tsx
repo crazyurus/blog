@@ -13,7 +13,7 @@ function Home(): JSX.Element {
         options={{
           speed: 36,
           waitUntilVisible: true,
-          cursorChar: '_',
+          cursorChar: '_'
         }}
       >
         <p>
@@ -44,7 +44,7 @@ function Home(): JSX.Element {
         <br />
         <p className="italic">
           这个项目基于 Next.js 开发，代码仓库在这里{' '}
-          <a href="https://github.com/crazyurus/blog" target="_blank">
+          <a href="https://github.com/crazyurus/blog" target="_blank" rel="noopener noreferrer">
             crazyurus/blog
           </a>
         </p>

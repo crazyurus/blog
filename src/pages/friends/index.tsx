@@ -16,7 +16,7 @@ function MusicList(props: Props): JSX.Element {
       <ol className={styles.list}>
         {friends.map(item => (
           <li key={item.url}>
-            <a className={styles.friend} href={item.url} target="_blank">
+            <a className={styles.friend} href={item.url} target="_blank" rel="noopener noreferrer">
               {item.name}
             </a>
           </li>
@@ -24,7 +24,7 @@ function MusicList(props: Props): JSX.Element {
       </ol>
       <p className={styles.after}>
         想成为我的朋友出现在这里？
-        <a href="https://wj.qq.com/s2/11991568/cfb8/" target="_blank">
+        <a href="https://wj.qq.com/s2/11991568/cfb8/" target="_blank" rel="noopener noreferrer">
           请戳这里填写问卷
         </a>
       </p>
@@ -38,8 +38,8 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
   return {
     props: {
       title: `${defaultTitle} friends`,
-      friends,
-    },
+      friends
+    }
   };
 }
 

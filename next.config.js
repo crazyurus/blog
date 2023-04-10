@@ -17,6 +17,23 @@ const nextConfig = {
 
     return config
   },
+  headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'SAMEORIGIN'
+          }
+        ],
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;

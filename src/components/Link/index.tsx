@@ -11,7 +11,7 @@ function Link(props: PropsWithChildren<Props>): JSX.Element {
   const { url, content } = props;
 
   return (
-    <a className={styles.link} href={url} target="_blank">
+    <a className={styles.link} href={url} target="_blank" rel="noopener noreferrer">
       <Image
         alt={content}
         src="https://github.githubassets.com/images/icons/emoji/unicode/1f30f.png"

@@ -26,7 +26,7 @@ function RepositoryList(props: Props): JSX.Element {
                 <li key={repository.id}>
                   <div className={styles.repository}>
                     <span className="flex-shrink-0">{repository.time.date}</span>
-                    <a className="flex-shrink-0" href={repository.url} target="_blank">
+                    <a className="flex-shrink-0" href={repository.url} target="_blank" rel="noopener noreferrer">
                       {repository.name}
                     </a>
                     {repository.description && (
@@ -60,8 +60,8 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
   return {
     props: {
       title: `${defaultTitle} repositories`,
-      repositories: result,
-    },
+      repositories: result
+    }
   };
 }
 
