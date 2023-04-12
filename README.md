@@ -33,3 +33,11 @@ https://crazyurus.cn
 ### `pnpm run build`
 
 使用生产模式构建你的项目，产物在 `dist` 目录下，构建时我们会对产物进行优化以拥有更好的性能，构建产物中的文件名均有 hash 值，并对内容进行了压缩。
+
+## 部署
+
+点击下方按钮可一键部署到 `Railway.app`：
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/qQTCSA?referralCode=ds7amN)
+
+这是个 Next.js 项目，你也可以选择 `Vercel` `Netlify` 或其它方式部署它
