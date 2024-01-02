@@ -20,6 +20,7 @@ function Header(props: Props): JSX.Element {
         <Link href="/">/home</Link>
         <Link href="/blogs">/blogs</Link>
         <Link href="/repositories">/repositories</Link>
+        <Link href="/bots">/bots</Link>
         {neteaseMusicPlaylistID && <Link href="/music">/music</Link>}
         <Link href="/friends">/friends</Link>
       </div>

@@ -1,0 +1,32 @@
+.list {
+  list-style: decimal;
+  padding-left: 40px;
+}
+
+.friend {
+  display: inline-block;
+  line-height: 2;
+  color: theme('colors.green');
+
+  &:hover {
+    color: theme('colors.black');
+    background-color: theme('colors.green');
+  }
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.before {
+  margin-bottom: 24px;
+
+  a {
+    color: theme('colors.green');
+
+    &:hover {
+      color: theme('colors.black');
+      background-color: theme('colors.green');
+    }
+  }
+}

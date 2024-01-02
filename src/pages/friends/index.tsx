@@ -8,7 +8,7 @@ interface Props {
   friends: Friend[];
 }
 
-function MusicList(props: Props): JSX.Element {
+function FriendList(props: Props): JSX.Element {
   const { friends } = props;
 
   return (
@@ -43,4 +43,4 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
   };
 }
 
-export default MusicList;
+export default FriendList;

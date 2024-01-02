@@ -45,3 +45,8 @@ export interface Friend {
   name: string;
   url: string;
 }
+
+export interface Bot {
+  name: string;
+  id: string;
+}
