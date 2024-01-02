@@ -48,7 +48,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext): Pr
   const content = await remark()
     .use(remarkHtml, { sanitize: false })
     .use(remarkGFM)
-    .use(remarkPrism)
+    .use(remarkPrism as any)
     .process(detail.content);
 
   return {

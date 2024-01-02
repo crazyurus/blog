@@ -14,16 +14,16 @@
     "axios": "^1.5.0",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.9",
-    "next": "^13.4.19",
+    "next": "^14.0.4",
     "next-progress": "^2.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "remark": "^14.0.3",
-    "remark-gfm": "^3.0.1",
-    "remark-html": "^15.0.2",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-html": "^16.0.1",
     "remark-prism": "^1.3.6",
-    "tailwindcss": "^3.3.3",
-    "typeit-react": "^2.6.4"
+    "tailwindcss": "^3.4.0",
+    "typeit-react": "^2.7.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
@@ -33,8 +33,8 @@
     "@types/react-dom": "^18.2.7",
     "@types/remark-prism": "^1.3.4",
     "autoprefixer": "^10.4.15",
-    "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
+    "eslint": "^8.48.0",
+    "eslint-config-next": "^14.0.4",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
@@ -46,7 +46,7 @@
     "stylelint": "^15.10.3",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^11.0.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.3.3"
   },
-  "packageManager": "pnpm@8.7.5"
+  "packageManager": "pnpm@8.12.1"
 }

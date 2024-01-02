@@ -7,7 +7,12 @@ const nextConfig = {
   swcMinify: true,
   output: 'standalone',
   images: {
-    domains: ['github.githubassets.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.githubassets.com'
+      }
+    ],
   },
   webpack(config) {
     config.module.rules.push({
