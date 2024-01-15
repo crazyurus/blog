@@ -27,6 +27,7 @@ function BlogDetail(props: Props): JSX.Element {
 
   return (
     <Fragment>
+      <div className={styles.title}>{detail.title}</div>
       {content}
       <div className={styles.footer}>
         <a href={`https://juejin.cn/post/${detail.id}`} target="_blank" rel="noopener noreferrer">
@@ -44,6 +45,7 @@ function BlogDetail(props: Props): JSX.Element {
 
 export async function getServerSideProps(context: GetServerSidePropsContext): Promise<{ props: Props }> {
   const { id } = context.params as { id: string };
+  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
   const detail = await getBlogDetail(id);
   const content = await remark()
     .use(remarkHtml, { sanitize: false })
@@ -53,7 +55,7 @@ export async function getServerSideProps(context: GetServerSidePropsContext): Pr
 
   return {
     props: {
-      title: detail.title,
+      title: `${defaultTitle} blogs`,
       detail: {
         ...detail,
         content: String(content)

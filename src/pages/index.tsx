@@ -17,12 +17,12 @@ function Home(): JSX.Element {
         }}
       >
         <p>
-          我是 <strong>Crazy Urus</strong>，毕业于「武汉理工大学」，现就职于「字节跳动」，坐标「武汉」
+          我是 <strong>Crazy Urus</strong>，是一名「前端开发工程师」，毕业于「武汉理工大学」
         </p>
         <br />
         <p>
           我对 <strong>React</strong>、<strong>小程序</strong>、<strong>低代码平台</strong>、<strong>开发工具链</strong>
-          、<strong>AIGC</strong> 和 <strong>Web 安全</strong> 等领域感兴趣
+          、<strong>大模型</strong> 和 <strong>Web 安全</strong> 等领域感兴趣
         </p>
         <br />
         <p>这是我的个人主页，内容还在陆续建设中</p>
