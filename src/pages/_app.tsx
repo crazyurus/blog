@@ -1,14 +1,19 @@
-import React, { useEffect, Fragment } from 'react';
-import Head from 'next/head';
 import type { NextPage } from 'next';
-import type { AppProps } from 'next/app';
 import NextProgress from 'next-progress';
+import type { AppProps } from 'next/app';
+import Head from 'next/head';
+import React, { Fragment, useEffect } from 'react';
+
+import colors from '../../constants/colors';
 import Layout from '../layouts/Basic';
 import { initBackground } from '../utils/background';
-import colors from '../../constants/colors';
+
 import '../styles/global.scss';
 import '../styles/canvas.scss';
 import '../styles/prism.scss';
+
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
@@ -47,6 +52,8 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
       <NextProgress color={colors.green} />
       {getLayout(<Component {...pageProps} />, pageProps)}
       <canvas id="canvas" />
+      <Analytics />
+      <SpeedInsights />
     </Fragment>
   );
 }
