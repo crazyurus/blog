@@ -12,9 +12,6 @@ import '../styles/global.scss';
 import '../styles/canvas.scss';
 import '../styles/prism.scss';
 
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
 const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
 type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
@@ -52,8 +49,6 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
       <NextProgress color={colors.green} />
       {getLayout(<Component {...pageProps} />, pageProps)}
       <canvas id="canvas" />
-      <Analytics />
-      <SpeedInsights />
     </Fragment>
   );
 }
