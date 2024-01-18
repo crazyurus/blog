@@ -1,7 +1,7 @@
 {
-  "name": "Crazy Urus blog",
-  "short_name": "Blog",
-  "description": "Crazy Urus blog",
+  "name": "Crazy Urus",
+  "short_name": "Crazy Urus",
+  "description": "Crazy Urus personal website",
   "start_url": "https://crazyurus.cn",
   "orientation": "portrait",
   "display": "minimal-ui",

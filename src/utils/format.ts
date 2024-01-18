@@ -9,10 +9,16 @@ export function formatYearAndDate(timestamp: number | string): {
 
   return {
     year: time.year(),
-    date: time.format('MM-DD'),
+    date: time.format('MM-DD')
   };
 }
 
 export function formatTime(time: string | number): string {
   return dayjs(time).format('YYYY-MM-DD');
+}
+
+export function formatTimestamp(timestamp: string | number): string {
+  const value = typeof timestamp === 'string' ? timestamp : timestamp * 1000;
+
+  return dayjs(value).toISOString();
 }

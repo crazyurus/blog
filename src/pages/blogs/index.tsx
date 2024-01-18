@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
 import Link from 'next/link';
+import React, { Fragment } from 'react';
+
 import { getBlogList } from '../../service';
 import type { Blog } from '../../types';
 import styles from './index.module.scss';
@@ -54,8 +55,8 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
   return {
     props: {
       title: `${defaultTitle} blogs`,
-      blogs: result,
-    },
+      blogs: result
+    }
   };
 }
 

@@ -6,7 +6,10 @@ interface Time {
 export interface Blog {
   id: string;
   title: string;
+  description: string;
+  categories: string[];
   time: Time;
+  date: string;
 }
 
 export interface BlogDetail {
