@@ -1,11 +1,13 @@
+import type { GetServerSidePropsContext } from 'next';
+import Head from 'next/head';
 import React, { Fragment } from 'react';
 import { remark } from 'remark';
-import remarkHtml from 'remark-html';
 import remarkGFM from 'remark-gfm';
+import remarkHtml from 'remark-html';
 import remarkPrism from 'remark-prism';
+
 import { getBlogDetail } from '../../service';
 import type { BlogDetail } from '../../types';
-import type { GetServerSidePropsContext } from 'next';
 import styles from './[id].module.scss';
 
 interface Props {
@@ -27,6 +29,10 @@ function BlogDetail(props: Props): JSX.Element {
 
   return (
     <Fragment>
+      <Head>
+        <title>{detail.title}</title>
+        <meta name="description" content={detail.description} />
+      </Head>
       <div className={styles.title}>{detail.title}</div>
       {content}
       <div className={styles.footer}>

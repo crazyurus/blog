@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: theme('colors.white');
+  color: theme('colors.white') !important;
   background-color: theme('colors.black');
   overflow-y: overlay;
   cursor: text;
