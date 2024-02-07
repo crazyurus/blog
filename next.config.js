@@ -1,3 +1,17 @@
+const cspHeader = `
+  default-src 'self';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  style-src 'self' 'unsafe-inline';
+  img-src *;
+  font-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+  block-all-mixed-content;
+  upgrade-insecure-requests;
+`;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -25,7 +39,7 @@ const nextConfig = {
   headers() {
     return [
       {
-        source: '/:path*',
+        source: '/(.*)',
         headers: [
           {
             key: 'X-XSS-Protection',
@@ -34,7 +48,11 @@ const nextConfig = {
           {
             key: 'X-Frame-Options',
             value: 'SAMEORIGIN'
-          }
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: cspHeader.replace(/\n/g, ''),
+          },
         ],
       },
     ]

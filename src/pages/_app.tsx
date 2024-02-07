@@ -41,6 +41,7 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
     <Fragment>
       <Head>
         <title>{title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
       <NextProgress color={colors.green} />
       {getLayout(<Component {...pageProps} />, pageProps)}
