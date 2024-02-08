@@ -1,12 +1,9 @@
 import type { NextPage } from 'next';
-import NextProgress from 'next-progress';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment } from 'react';
 
-import colors from '../../constants/colors';
 import Layout from '../layouts/Basic';
-import { initBackground } from '../utils/background';
 
 import '../styles/global.scss';
 import '../styles/canvas.scss';
@@ -35,17 +32,13 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   const { title = defaultTitle } = pageProps;
   const getLayout = Component.getLayout ?? getDefaultLayout;
 
-  useEffect(initBackground, []);
-
   return (
     <Fragment>
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       </Head>
-      <NextProgress color={colors.green} />
       {getLayout(<Component {...pageProps} />, pageProps)}
-      <canvas id="canvas" />
     </Fragment>
   );
 }

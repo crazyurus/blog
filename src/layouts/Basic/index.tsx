@@ -1,6 +1,10 @@
-import React, { type PropsWithChildren } from 'react';
-import Header from './header';
+import NextProgress from 'next-progress';
+import React, { Fragment, useEffect, type PropsWithChildren } from 'react';
+
+import colors from '../../../constants/colors';
+import { initBackground } from '../../utils/background';
 import Footer from './footer';
+import Header from './header';
 import styles from './index.module.scss';
 
 interface Props {
@@ -10,12 +14,18 @@ interface Props {
 function Layout(props: PropsWithChildren<Props>): JSX.Element {
   const { title, children } = props;
 
+  useEffect(initBackground, []);
+
   return (
-    <div className={styles.layout}>
-      <Header title={title} />
-      <main className={styles.content}>{children}</main>
-      <Footer />
-    </div>
+    <Fragment>
+      <NextProgress color={colors.green} />
+      <div className={styles.layout}>
+        <Header title={title} />
+        <main className={styles.content}>{children}</main>
+        <Footer />
+      </div>
+      <canvas id="canvas" />
+    </Fragment>
   );
 }
 
