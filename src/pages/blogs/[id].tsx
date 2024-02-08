@@ -51,7 +51,7 @@ function BlogDetail(props: Props): JSX.Element {
 
 export async function getServerSideProps(context: GetServerSidePropsContext): Promise<{ props: Props }> {
   const { id } = context.params as { id: string };
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
+  const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
   const detail = await getBlogDetail(id);
   const content = await remark()
     .use(remarkHtml, { sanitize: false })

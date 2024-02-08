@@ -42,7 +42,7 @@ function BlogList(props: Props): JSX.Element {
 export async function getServerSideProps(): Promise<{ props: Props }> {
   const blogs = await getBlogList();
   const result: Props['blogs'] = {};
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
+  const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   blogs.forEach(item => {
     if (!result[item.time.year]) {

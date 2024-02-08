@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Link } from '../../components';
 import styles from './footer.module.scss';
 
@@ -17,7 +18,7 @@ function Footer(): JSX.Element {
       <div className={styles.contact}>
         <Link url={`https://github.com/${GitHubUserName}`} title="GitHub" />
         <Link url={`https://juejin.cn/user/${JuejinUserID}`} title="Juejin" />
-        {ZhihuUserName && <Link url={`https://www.zhihu.com/people/${ZhihuUserName}`} title="Zhihu" />}
+        <Link url={`https://www.zhihu.com/people/${ZhihuUserName}`} title="Zhihu" />
       </div>
     </footer>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import friends from '../../../constants/friends';
 import type { Friend } from '../../types';
 import styles from './index.module.scss';
@@ -33,7 +34,7 @@ function FriendList(props: Props): JSX.Element {
 }
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
+  const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   return {
     props: {

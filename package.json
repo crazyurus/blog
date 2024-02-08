@@ -15,6 +15,8 @@
     "@vercel/speed-insights": "^1.0.4",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.9",
+    "framework7": "^8.3.1",
+    "framework7-react": "^8.3.1",
     "next": "^14.0.4",
     "next-middlewares": "^1.0.0",
     "next-progress": "^2.3.1",

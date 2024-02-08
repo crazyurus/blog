@@ -3,7 +3,7 @@ import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
 import * as http from './utils/request';
 
 export async function getBlogList(): Promise<Blog[]> {
-  const { NEXT_PUBLIC_JUEJIN_USERID: userID } = process.env;
+  const userID = process.env.NEXT_PUBLIC_JUEJIN_USERID;
   const response = await http.post('https://api.juejin.cn/content_api/v1/article/query_list', {
     user_id: userID,
     sort_type: 2,
@@ -47,7 +47,7 @@ export async function getBlogDetail(id: string): Promise<BlogDetail> {
 }
 
 export async function getRepositoryList(): Promise<Repository[]> {
-  const { NEXT_PUBLIC_GITHUB_USERNAME: userName } = process.env;
+  const userName = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
   const response = await http.get(`https://api.github.com/users/${userName}/repos?sort=created&per_page=100`);
 
   if (Array.isArray(response)) {
@@ -66,7 +66,7 @@ export async function getRepositoryList(): Promise<Repository[]> {
 }
 
 export async function getMusicList(): Promise<Music[]> {
-  const { NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID: playlistID } = process.env;
+  const playlistID = process.env.NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID;
   const playlistResponse = await http.get(`https://music.163.com/api/v6/playlist/detail?id=${playlistID}&n=1000`);
   const musicIDs = playlistResponse.playlist.trackIds.map((track: any) => ({
     id: track.id

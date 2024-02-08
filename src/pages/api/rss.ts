@@ -5,7 +5,7 @@ import manifest from '../../../public/manifest.json';
 import { getBlogList } from '../../service';
 
 async function handler(request: NextApiRequest, response: NextApiResponse) {
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
+  const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
   const feed = new RSS({
     title: `${defaultTitle} blogs`,
     description: `Welcome to ${defaultTitle} blog posts`,

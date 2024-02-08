@@ -4,7 +4,7 @@ import { Head, Html, Main, NextScript } from 'next/document';
 import React from 'react';
 
 function Document(): JSX.Element {
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
+  const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   return (
     <Html lang="zh-CN">

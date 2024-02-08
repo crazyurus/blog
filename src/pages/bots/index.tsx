@@ -1,4 +1,5 @@
 import React from 'react';
+
 import bots from '../../../constants/bots';
 import type { Bot } from '../../types';
 import styles from './index.module.scss';
@@ -27,8 +28,7 @@ function BotList(props: Props): JSX.Element {
               className={styles.friend}
               href={`https://www.doubao.com/share?botId=${item.id}`}
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               {item.name}
             </a>
           </li>
@@ -39,7 +39,7 @@ function BotList(props: Props): JSX.Element {
 }
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
+  const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   return {
     props: {
