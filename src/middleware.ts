@@ -1,12 +1,7 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { config, createMiddleware } from 'next-middlewares';
 
-export function middleware(request: NextRequest): NextResponse {
-  return NextResponse.rewrite(new URL('/api/rss', request.url), {
-    request
-  });
-}
+import * as RSSMiddleware from './middlewares/rss';
 
-export const config = {
-  matcher: '/rss.xml'
-};
+export const middleware = createMiddleware([RSSMiddleware]);
+
+export { config };
