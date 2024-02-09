@@ -19,7 +19,7 @@ function Home(): JSX.Element {
       </Block>
       <BlockTitle medium>导航</BlockTitle>
       <List className={styles.list} mediaList dividers strong inset>
-        <ListItem title="博客">
+        <ListItem title="博客" link="/blogs">
           <Icon icon={classNames(styles.icon, styles.green)} slot="media" f7="doc_text_fill" />
         </ListItem>
         <ListItem title="仓库">

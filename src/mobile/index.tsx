@@ -11,6 +11,10 @@ const routes = [
     asyncComponent: () => import('./home')
   },
   {
+    path: '/blogs',
+    asyncComponent: () => import('./blog')
+  },
+  {
     path: '/bots',
     asyncComponent: () => import('./bot')
   },
