@@ -2,6 +2,7 @@ import Framework7 from 'framework7';
 import Framework7React, { App, View } from 'framework7-react';
 import React from 'react';
 
+import 'framework7-icons';
 import 'framework7/css/bundle';
 
 const routes = [

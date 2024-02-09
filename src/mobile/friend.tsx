@@ -7,7 +7,7 @@ function Friend(): JSX.Element {
   return (
     <Page name="friends">
       <Navbar title="朋友" large backLink="首页" />
-      <List dividersIos strong>
+      <List dividers strong>
         {friends.map(item => (
           <ListItem key={item.url} title={item.name} link={item.url} external />
         ))}

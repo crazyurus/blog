@@ -7,7 +7,7 @@ function Bot(): JSX.Element {
   return (
     <Page name="bots">
       <Navbar title="机器人" large backLink="首页" />
-      <List dividersIos strong>
+      <List dividers strong>
         <BlockHeader>
           以下 Bot 可在{' '}
           <a className="external" href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer">

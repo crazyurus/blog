@@ -1,0 +1,42 @@
+.list {
+  :global(.item-inner) {
+    line-height: 32px;
+  }
+}
+
+.icon {
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.green {
+  background-color: #40d663;
+}
+
+.blue {
+  background-color: #2e90ff;
+}
+
+.purple {
+  background-color: #7548c8;
+}
+
+.orange {
+  background-color: #ff8b37;
+}
+
+.yellow {
+  background-color: #ffca18;
+}
+
+.black {
+  background-color: #41434f;
+}
+
+.gray {
+  background-color: #9095a1;
+}
