@@ -41,6 +41,7 @@ export interface Music {
   id: string;
   name: string;
   author: string[];
+  image: string;
   time: string;
 }
 

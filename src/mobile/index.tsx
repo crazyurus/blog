@@ -15,8 +15,16 @@ const routes = [
     asyncComponent: () => import('./blog')
   },
   {
+    path: '/repositories',
+    asyncComponent: () => import('./repository')
+  },
+  {
     path: '/bots',
     asyncComponent: () => import('./bot')
+  },
+  {
+    path: '/music',
+    asyncComponent: () => import('./music')
   },
   {
     path: '/friends',

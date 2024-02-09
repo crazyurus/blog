@@ -25,6 +25,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'github.githubassets.com'
+      },
+      {
+        protocol: 'https',
+        hostname: '*.music.126.net'
       }
     ],
   },

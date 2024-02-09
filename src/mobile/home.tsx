@@ -22,13 +22,13 @@ function Home(): JSX.Element {
         <ListItem title="博客" link="/blogs">
           <Icon icon={classNames(styles.icon, styles.green)} slot="media" f7="doc_text_fill" />
         </ListItem>
-        <ListItem title="仓库">
+        <ListItem title="仓库" link="/repositories">
           <Icon icon={classNames(styles.icon, styles.blue)} slot="media" f7="square_stack_3d_up_fill" />
         </ListItem>
         <ListItem title="机器人" link="/bots">
           <Icon icon={classNames(styles.icon, styles.purple)} slot="media" f7="ellipses_bubble_fill" />
         </ListItem>
-        <ListItem title="音乐">
+        <ListItem title="音乐" link="/music">
           <Icon icon={classNames(styles.icon, styles.orange)} slot="media" f7="music_note_2" />
         </ListItem>
         <ListItem title="朋友" link="/friends">

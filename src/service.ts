@@ -78,6 +78,7 @@ export async function getMusicList(): Promise<Music[]> {
       id: item.id,
       name: item.name,
       author: item.ar.map((r: any) => r.name),
+      image: item.al.picUrl,
       time: formatTime(item.publishTime)
     };
   });
