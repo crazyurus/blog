@@ -25,8 +25,8 @@ function Layout(): JSX.Element {
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   return (
-    <App name={defaultTitle} theme="auto" darkMode routes={routes}>
-      <View main />
+    <App name={defaultTitle} theme="auto" darkMode>
+      <View url="/" main browserHistory routes={routes} browserHistorySeparator="" />
     </App>
   );
 }

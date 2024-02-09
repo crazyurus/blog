@@ -30,7 +30,11 @@ function Introduction(props: Props): JSX.Element {
       </p>
       {divider}
       <p>
-        你也可以通过电子邮件 <a href="mailto:crazyurus@vip.qq.com">crazyurus@vip.qq.com</a> 联系我
+        你也可以通过电子邮件{' '}
+        <a className="external" href="mailto:crazyurus@vip.qq.com">
+          crazyurus@vip.qq.com
+        </a>{' '}
+        联系我
       </p>
     </Fragment>
   );

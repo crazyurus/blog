@@ -6,7 +6,7 @@ import bots from '../../../constants/bots';
 function Bot(): JSX.Element {
   return (
     <Page name="bots">
-      <Navbar title="机器人" large />
+      <Navbar title="机器人" large backLink="首页" />
       <List dividersIos strong>
         <BlockHeader>
           以下 Bot 可在{' '}
