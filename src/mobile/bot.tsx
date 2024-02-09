@@ -1,7 +1,7 @@
 import { BlockHeader, List, ListItem, Navbar, Page } from 'framework7-react';
 import React from 'react';
 
-import bots from '../../../constants/bots';
+import bots from '../../constants/bots';
 
 function Bot(): JSX.Element {
   return (

@@ -1,7 +1,7 @@
 import { Block, BlockTitle, List, ListItem, Navbar, Page } from 'framework7-react';
 import React from 'react';
 
-import { Introduction } from '../../components';
+import { Introduction } from '../components';
 
 function Home(): JSX.Element {
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;

@@ -1,7 +1,7 @@
 import { BlockFooter, List, ListItem, Navbar, Page } from 'framework7-react';
 import React from 'react';
 
-import friends from '../../../constants/friends';
+import friends from '../../constants/friends';
 
 function Friend(): JSX.Element {
   return (

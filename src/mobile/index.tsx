@@ -21,7 +21,7 @@ const routes = [
 
 Framework7.use(Framework7React);
 
-function Layout(): JSX.Element {
+function Mobile(): JSX.Element {
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   return (
@@ -31,4 +31,4 @@ function Layout(): JSX.Element {
   );
 }
 
-export default Layout;
+export default Mobile;
