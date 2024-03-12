@@ -15,6 +15,11 @@ function Footer(): JSX.Element {
       <div>
         &copy; {year} {defaultTitle}
       </div>
+      <div>
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
+          鄂ICP备2024040993号-1
+        </a>
+      </div>
       <div className={styles.contact}>
         <Link url={`https://github.com/${GitHubUserName}`} title="GitHub" />
         <Link url={`https://juejin.cn/user/${JuejinUserID}`} title="Juejin" />
