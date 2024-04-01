@@ -2,8 +2,8 @@ import { List, ListItem, Navbar, Page } from 'framework7-react';
 import React from 'react';
 import useSWR from 'swr';
 
-import type { Blog } from '../types';
-import { get } from '../utils/request';
+import type { Blog } from '../../types';
+import { get } from '../../utils/request';
 
 interface Response {
   data: {
@@ -22,8 +22,7 @@ function Blog(): JSX.Element {
         {blogs.map(item => (
           <ListItem
             key={item.id}
-            link={`https://juejin.cn/post/${item.id}`}
-            external
+            link={`/blogs/${item.id}`}
             title={item.title}
             subtitle={`${item.time.year}-${item.time.date}`}
             text={item.description}

@@ -11,8 +11,12 @@ const routes = [
     asyncComponent: () => import('./home')
   },
   {
+    path: '/blogs/:id',
+    asyncComponent: () => import('./blogs/[id]')
+  },
+  {
     path: '/blogs',
-    asyncComponent: () => import('./blog')
+    asyncComponent: () => import('./blogs/index')
   },
   {
     path: '/repositories',

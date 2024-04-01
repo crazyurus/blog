@@ -1,16 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { getBlogList } from '../../service';
+import { getBlogDetail } from '../../../service';
 
 async function handler(request: NextApiRequest, response: NextApiResponse) {
-  const blogs = await getBlogList();
+  const { id } = request.query;
+  const blog = await getBlogDetail(id as string);
 
   response.json({
     code: 0,
     message: '',
-    data: {
-      blogs
-    }
+    data: blog
   });
 }
 
