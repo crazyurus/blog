@@ -8,19 +8,19 @@ import { get } from '../utils/request';
 
 interface Response {
   data: {
-    movie: Movie[];
+    movies: Movie[];
   };
 }
 
 function Movie(): JSX.Element {
   const { data } = useSWR<Response>('/api/movie', get);
-  const movie = data ? data.data.movie : [];
+  const movies = data ? data.data.movies : [];
 
   return (
     <Page name="movie">
       <Navbar title="喜欢的电影" large backLink="首页" />
       <List mediaList dividers strong>
-        {movie.map(item => (
+        {movies.map(item => (
           <ListItem
             key={item.id}
             link={item.url}

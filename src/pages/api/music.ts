@@ -1,17 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { getMusicList } from '../../service';
+import { createHandler } from '../../utils/api';
 
-async function handler(request: NextApiRequest, response: NextApiResponse) {
-  const music = await getMusicList();
-
-  response.json({
-    code: 0,
-    message: '',
-    data: {
-      music
-    }
-  });
-}
+const handler = createHandler('music', getMusicList);
 
 export default handler;
