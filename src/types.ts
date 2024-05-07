@@ -45,6 +45,16 @@ export interface Music {
   time: string;
 }
 
+export interface Movie {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  time: string;
+  rate: number;
+}
+
 export interface Friend {
   name: string;
   url: string;

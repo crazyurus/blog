@@ -1,4 +1,4 @@
-import type { Blog, BlogDetail, Music, Repository } from './types';
+import type { Blog, BlogDetail, Movie, Music, Repository } from './types';
 import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
 import * as http from './utils/request';
 
@@ -80,6 +80,30 @@ export async function getMusicList(): Promise<Music[]> {
       author: item.ar.map((r: any) => r.name),
       image: item.al.picUrl,
       time: formatTime(item.publishTime)
+    };
+  });
+}
+
+export async function getMovieList(): Promise<Movie[]> {
+  const accountID = process.env.NEXT_PUBLIC_TMDB_ACCOUNT_ID;
+  const apiKey = process.env.TMDB_API_KEY;
+  const response = await http.get(
+    `https://try.readme.io/api.themoviedb.org/3/account/${accountID}/favorite/movies?language=zh-CN&page=1&sort_by=created_at.desc`,
+    {
+      Authorization: `Bearer ${apiKey}`,
+      Origin: 'https://developer.themoviedb.org'
+    }
+  );
+
+  return response.results.map((item: any) => {
+    return {
+      id: item.id,
+      title: item.title,
+      description: item.overview.trim(),
+      image: 'https://image.tmdb.org/t/p/original' + item.poster_path,
+      url: `https://www.themoviedb.org/movie/${item.id}`,
+      time: item.release_date,
+      rate: item.vote_average
     };
   });
 }

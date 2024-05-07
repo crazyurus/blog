@@ -19,6 +19,12 @@ https://crazyurus.cn
 - `NEXT_PUBLIC_JUEJIN_ID` 掘金用户 ID
 - `NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID` （可选）网易云音乐歌单 ID
 - `NEXT_PUBLIC_ZHIHU_USERNAME` （可选）知乎用户名
+- `NEXT_PUBLIC_TMDB_ACCOUNT_ID` （可选）TMDB 用户 ID
+- `NEXT_PUBLIC_MIIT_BEIAN` （可选）ICP 备案号
+
+你还需要新建 `.env.local` 并配置私有的密钥
+
+- `TMDB_API_KEY` （可选）TMDB API 读访问令牌
 
 你可以通过修改 `constants/friends.js` 配置友情链接，修改 `constants/colors.js` 配置色板
 
@@ -26,7 +32,7 @@ https://crazyurus.cn
 
 在这个项目中，你可以使用：
 
-### `pnpm run start`
+### `pnpm run dev`
 
 使用开发模式运行你的项目，可打开 [http://localhost:3000](http://localhost:3000) 在浏览器中查看。当文件修改时页面会自动更新
 

@@ -1,7 +1,8 @@
-export async function get<T = any>(url: string): Promise<T> {
+export async function get<T = any>(url: string, headers?: any): Promise<T> {
   const response = await fetch(url, {
     method: 'GET',
     headers: {
+      ...headers,
       'Content-Type': 'application/json'
     }
   });
@@ -10,11 +11,12 @@ export async function get<T = any>(url: string): Promise<T> {
   return result;
 }
 
-export async function post<T = any>(url: string, data: any): Promise<T> {
+export async function post<T = any>(url: string, data: any, headers?: any): Promise<T> {
   const response = await fetch(url, {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
+      ...headers,
       'Content-Type': 'application/json'
     }
   });

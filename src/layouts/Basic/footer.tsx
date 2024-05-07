@@ -9,6 +9,7 @@ function Footer(): JSX.Element {
   const JuejinUserID = process.env.NEXT_PUBLIC_JUEJIN_USERID;
   const ZhihuUserName = process.env.NEXT_PUBLIC_ZHIHU_USERNAME;
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
+  const beian = process.env.NEXT_PUBLIC_MIIT_BEIAN;
 
   return (
     <footer className={styles.footer}>
@@ -17,7 +18,7 @@ function Footer(): JSX.Element {
       </div>
       <div>
         <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">
-          鄂ICP备2024040993号-1
+          {beian}
         </a>
       </div>
       <div className={styles.contact}>

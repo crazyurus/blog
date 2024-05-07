@@ -1,0 +1,23 @@
+.list {
+  list-style: decimal;
+  padding-left: 40px;
+}
+
+.movie {
+  display: flex;
+  gap: 16px;
+  line-height: 2;
+
+  a {
+    color: theme('colors.green');
+
+    &:hover {
+      color: theme('colors.black');
+      background-color: theme('colors.green');
+    }
+  }
+}
+
+.section {
+  margin-top: 24px;
+}

@@ -14,5 +14,5 @@ export function middleware(request: NextRequest): NextResponse {
 }
 
 export const config = {
-  matcher: ['/', '/blogs', '/blogs/:id', '/repositories', '/bots', '/music', '/friends']
+  matcher: ['/', '/blogs', '/blogs/:id', '/repositories', '/bots', '/music', '/movie', '/friends']
 };

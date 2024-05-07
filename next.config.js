@@ -29,6 +29,10 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: '*.music.126.net'
+      },
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org'
       }
     ],
   },

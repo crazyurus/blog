@@ -31,6 +31,10 @@ const routes = [
     asyncComponent: () => import('./music')
   },
   {
+    path: '/movie',
+    asyncComponent: () => import('./movie')
+  },
+  {
     path: '/friends',
     asyncComponent: () => import('./friend')
   }

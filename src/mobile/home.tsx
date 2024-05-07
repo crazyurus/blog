@@ -31,6 +31,9 @@ function Home(): JSX.Element {
         <ListItem title="音乐" link="/music">
           <Icon icon={classNames(styles.icon, styles.orange)} slot="media" f7="music_note_2" />
         </ListItem>
+        <ListItem title="电影" link="/movie">
+          <Icon icon={classNames(styles.icon, styles.red)} slot="media" f7="play_rectangle_fill" />
+        </ListItem>
         <ListItem title="朋友" link="/friends">
           <Icon icon={classNames(styles.icon, styles.yellow)} slot="media" f7="link_circle_fill" />
         </ListItem>

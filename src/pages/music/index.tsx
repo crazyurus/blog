@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { getMusicList } from '../../service';
 import type { Music } from '../../types';
 import styles from './index.module.scss';
@@ -22,8 +23,7 @@ function MusicList(props: Props): JSX.Element {
                 className="flex-shrink-0"
                 href={`https://music.163.com/#/song?id=${item.id}`}
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 {item.name}
               </a>
               <span className="flex-grow text-ellipsis whitespace-nowrap overflow-hidden">
@@ -43,7 +43,7 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
 
   return {
     props: {
-      title: `${defaultTitle} music`,
+      title: `${defaultTitle} favorite music`,
       music
     }
   };
