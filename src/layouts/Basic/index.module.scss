@@ -11,4 +11,8 @@
   min-height: calc(100vh - 242px);
   outline: none;
   caret-color: theme('colors.green');
+
+  &.empty {
+    min-height: calc(100vh - 221px);
+  }
 }
