@@ -24,7 +24,7 @@ function Header(props: Props): JSX.Element {
         <Link href="/repositories">/repositories</Link>
         <Link href="/bots">/bots</Link>
         {neteaseMusicPlaylistID && <Link href="/music">/music</Link>}
-        {TMDBAccountID && <Link href="/movie">/movie</Link>}
+        {TMDBAccountID && <Link href="/movies">/movies</Link>}
         <Link href="/friends">/friends</Link>
       </div>
     </header>

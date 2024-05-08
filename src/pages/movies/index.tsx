@@ -6,16 +6,16 @@ import styles from './index.module.scss';
 
 interface Props {
   title: string;
-  movie: Movie[];
+  movies: Movie[];
 }
 
 function MovieList(props: Props): JSX.Element {
-  const { movie } = props;
+  const { movies } = props;
 
   return (
     <div className={styles.section}>
       <ol className={styles.list}>
-        {movie.map(item => (
+        {movies.map(item => (
           <li key={item.id}>
             <div className={styles.movie}>
               <span className="flex-shrink-0">{item.time}</span>
@@ -32,13 +32,13 @@ function MovieList(props: Props): JSX.Element {
 }
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
-  const movie = await getMovieList();
+  const movies = await getMovieList();
   const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
 
   return {
     props: {
-      title: `${defaultTitle} favorite movie`,
-      movie
+      title: `${defaultTitle} favorite movies`,
+      movies
     }
   };
 }

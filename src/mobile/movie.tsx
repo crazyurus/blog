@@ -13,11 +13,11 @@ interface Response {
 }
 
 function Movie(): JSX.Element {
-  const { data } = useSWR<Response>('/api/movie', get);
+  const { data } = useSWR<Response>('/api/movies', get);
   const movies = data ? data.data.movies : [];
 
   return (
-    <Page name="movie">
+    <Page name="movies">
       <Navbar title="喜欢的电影" large backLink="首页" />
       <List mediaList dividers strong>
         {movies.map(item => (
