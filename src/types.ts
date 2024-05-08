@@ -50,9 +50,27 @@ export interface Movie {
   title: string;
   description: string;
   image: string;
-  url: string;
   time: string;
   rate: number;
+}
+
+interface Credit {
+  id: number;
+  name: string;
+  avatar: string;
+  character: string;
+}
+
+export interface MovieDetail {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  time: string;
+  categories: string[];
+  rate: number;
+  duration: number;
+  credits: Credit[];
 }
 
 export interface Friend {

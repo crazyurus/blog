@@ -1,4 +1,4 @@
-import type { Blog, BlogDetail, Movie, Music, Repository } from './types';
+import type { Blog, BlogDetail, Movie, MovieDetail, Music, Repository } from './types';
 import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
 import * as http from './utils/request';
 
@@ -84,6 +84,8 @@ export async function getMusicList(): Promise<Music[]> {
   });
 }
 
+const TMDB_CDN_URL = 'https://image.tmdb.org/t/p/original';
+
 export async function getMovieList(): Promise<Movie[]> {
   const accountID = process.env.NEXT_PUBLIC_TMDB_ACCOUNT_ID;
   const apiKey = process.env.TMDB_API_KEY;
@@ -100,10 +102,40 @@ export async function getMovieList(): Promise<Movie[]> {
       id: item.id,
       title: item.title,
       description: item.overview.trim(),
-      image: 'https://image.tmdb.org/t/p/original' + item.poster_path,
-      url: `https://www.themoviedb.org/movie/${item.id}`,
+      image: TMDB_CDN_URL + item.poster_path,
       time: item.release_date,
       rate: item.vote_average
     };
   });
+}
+
+export async function getMovieDetail(id: string): Promise<MovieDetail> {
+  const apiKey = process.env.TMDB_API_KEY;
+  const headers = {
+    Authorization: `Bearer ${apiKey}`,
+    Origin: 'https://developer.themoviedb.org'
+  };
+  const [response, creditResponse] = await Promise.all([
+    http.get(`https://try.readme.io/api.themoviedb.org/3/movie/${id}?language=zh-CN`, headers),
+    http.get(`https://try.readme.io/api.themoviedb.org/3/movie/${id}/credits?language=zh-CN`, headers)
+  ]);
+
+  return {
+    id: response.id,
+    title: response.title,
+    description: response.overview.trim(),
+    image: TMDB_CDN_URL + response.backdrop_path,
+    time: response.release_date,
+    categories: response.genres.map((item: any) => item.name),
+    rate: response.vote_average,
+    duration: response.runtime,
+    credits: creditResponse.cast.map((item: any) => ({
+      id: item.id,
+      name: item.name,
+      avatar: item.profile_path
+        ? TMDB_CDN_URL + item.profile_path
+        : 'https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-4-user-grey-d8fe957375e70239d6abdd549fd7568c89281b2179b5f4470e2e12895792dfa5.svg',
+      character: item.character
+    }))
+  };
 }

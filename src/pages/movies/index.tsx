@@ -19,7 +19,11 @@ function MovieList(props: Props): JSX.Element {
           <li key={item.id}>
             <div className={styles.movie}>
               <span className="flex-shrink-0">{item.time}</span>
-              <a className="flex-shrink-0" href={item.url} target="_blank" rel="noopener noreferrer">
+              <a
+                className="flex-shrink-0"
+                href={`https://www.themoviedb.org/movie/${item.id}`}
+                target="_blank"
+                rel="noopener noreferrer">
                 {item.title}
               </a>
               <span className="flex-grow text-ellipsis whitespace-nowrap overflow-hidden">-- {item.rate}</span>

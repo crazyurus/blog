@@ -3,8 +3,8 @@ import Image from 'next/image';
 import React from 'react';
 import useSWR from 'swr';
 
-import type { Movie } from '../types';
-import { get } from '../utils/request';
+import type { Movie } from '../../types';
+import { get } from '../../utils/request';
 
 interface Response {
   data: {
@@ -23,8 +23,7 @@ function Movie(): JSX.Element {
         {movies.map(item => (
           <ListItem
             key={item.id}
-            link={item.url}
-            external
+            link={`/movies/${item.id}`}
             title={item.title}
             subtitle={item.time}
             text={item.description}>

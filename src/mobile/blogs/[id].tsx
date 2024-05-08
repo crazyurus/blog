@@ -10,7 +10,9 @@ import { get } from '../../utils/request';
 import styles from './[id].module.scss';
 
 interface Response {
-  data: BlogDetail;
+  data: {
+    blog: BlogDetail;
+  };
 }
 
 interface Props {
@@ -19,9 +21,9 @@ interface Props {
 
 function BlogDetail(props: Props): JSX.Element {
   const { id } = props;
-  const { data: blog } = useSWR<Response['data']>(`/api/blogs/${id}`, async (url: string) => {
+  const { data: blog } = useSWR<Response['data']['blog']>(`/api/blogs/${id}`, async (url: string) => {
     const response = await get<Response>(url);
-    const blog = response.data;
+    const { blog } = response.data;
     const content = await remark().use(remarkHtml, { sanitize: false }).use(remarkGFM).process(blog.content);
 
     blog.content = content.toString();

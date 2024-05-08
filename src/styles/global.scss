@@ -25,3 +25,7 @@ a::selection {
   --ti-cursor-color: theme('colors.green');
   --ti-cursor-font-weight: 900;
 }
+
+.page[data-name='movie'] {
+  background-color: #fff;
+}

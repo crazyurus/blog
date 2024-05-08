@@ -1,17 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
 import { getBlogList } from '../../../service';
+import { createHandler } from '../../../utils/api';
 
-async function handler(request: NextApiRequest, response: NextApiResponse) {
-  const blogs = await getBlogList();
-
-  response.json({
-    code: 0,
-    message: '',
-    data: {
-      blogs
-    }
-  });
-}
+const handler = createHandler('blogs', getBlogList);
 
 export default handler;
