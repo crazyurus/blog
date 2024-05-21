@@ -1,6 +1,7 @@
 import React from 'react';
 
-import bots from '../../../constants/bots';
+import { getBotList } from '@/service';
+
 import type { Bot } from '../../types';
 import styles from './index.module.scss';
 
@@ -39,6 +40,7 @@ function BotList(props: Props): JSX.Element {
 }
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
+  const bots = await getBotList();
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;
 
   return {

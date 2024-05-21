@@ -1,9 +1,20 @@
 import { BlockFooter, List, ListItem, Navbar, Page } from 'framework7-react';
 import React from 'react';
+import useSWR from 'swr';
 
-import friends from '../../constants/friends';
+import type { Friend } from '../types';
+import { get } from '../utils/request';
+
+interface Response {
+  data: {
+    friends: Friend[];
+  };
+}
 
 function Friend(): JSX.Element {
+  const { data } = useSWR<Response>('/api/friends', get);
+  const friends = data ? data.data.friends : [];
+
   return (
     <Page name="friends">
       <Navbar title="朋友" large backLink="首页" />

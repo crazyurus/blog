@@ -1,4 +1,4 @@
-import type { Blog, BlogDetail, Movie, MovieDetail, Music, Repository } from './types';
+import type { Blog, BlogDetail, Bot, Friend, Movie, MovieDetail, Music, Repository } from './types';
 import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
 import * as http from './utils/request';
 
@@ -138,4 +138,28 @@ export async function getMovieDetail(id: string): Promise<MovieDetail> {
       character: item.character
     }))
   };
+}
+
+export async function getBotList(): Promise<Bot[]> {
+  const apiKey = process.env.STRAPI_API_KEY;
+  const response = await http.get('https://strapi.admin.crazyurus.cn/api/bots', {
+    Authorization: `Bearer ${apiKey}`
+  });
+
+  return response.data.map((item: any) => ({
+    id: item.attributes.botID,
+    name: item.attributes.name
+  }));
+}
+
+export async function getFriendList(): Promise<Friend[]> {
+  const apiKey = process.env.STRAPI_API_KEY;
+  const response = await http.get('https://strapi.admin.crazyurus.cn/api/friends', {
+    Authorization: `Bearer ${apiKey}`
+  });
+
+  return response.data.map((item: any) => ({
+    name: item.attributes.name,
+    url: item.attributes.url
+  }));
 }

@@ -26,7 +26,7 @@ https://crazyurus.cn
 
 - `TMDB_API_KEY` （可选）TMDB API 读访问令牌
 
-你可以通过修改 `constants/friends.js` 配置友情链接，修改 `constants/colors.js` 配置色板
+你可以通过修改 `constants/colors.js` 配置色板
 
 ## 可用脚本
 

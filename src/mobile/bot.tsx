@@ -1,9 +1,20 @@
 import { BlockHeader, List, ListItem, Navbar, Page } from 'framework7-react';
 import React from 'react';
+import useSWR from 'swr';
 
-import bots from '../../constants/bots';
+import type { Bot } from '../types';
+import { get } from '../utils/request';
+
+interface Response {
+  data: {
+    bots: Bot[];
+  };
+}
 
 function Bot(): JSX.Element {
+  const { data } = useSWR<Response>('/api/bots', get);
+  const bots = data ? data.data.bots : [];
+
   return (
     <Page name="bots">
       <Navbar title="机器人" large backLink="首页" />
