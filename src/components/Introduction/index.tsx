@@ -10,12 +10,12 @@ function Introduction(props: Props): JSX.Element {
   return (
     <Fragment>
       <p>
-        我是 <strong>Crazy Urus</strong>，是一名「前端开发工程师」，毕业于「武汉理工大学」
+        我是 <strong>Crazy Urus</strong>，是一名「前端/全栈开发工程师」，毕业于「武汉理工大学」
       </p>
       {divider}
       <p>
-        我对 <strong>React</strong>、<strong>小程序</strong>、<strong>低代码平台</strong>、<strong>开发工具链</strong>、
-        <strong>大模型</strong> 和 <strong>Web 安全</strong> 等领域感兴趣
+        我对 <strong>React</strong>、<strong>小程序</strong>、<strong>Node.js</strong>、<strong>工程化</strong>、
+        <strong>AI 大模型</strong> 和 <strong>Web 安全</strong> 等领域感兴趣
       </p>
       {divider}
       <p>这是我的个人主页，内容还在陆续建设中</p>
