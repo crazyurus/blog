@@ -15,6 +15,10 @@ body {
   cursor: text;
 }
 
+.framework7-root {
+  color: #fff !important;
+}
+
 ::selection,
 a::selection {
   background-color: theme('colors.green');
