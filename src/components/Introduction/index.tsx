@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { Fragment } from 'react';
 
 interface Props {
@@ -21,12 +22,32 @@ function Introduction(props: Props): JSX.Element {
       <p>这是我的个人主页，内容还在陆续建设中</p>
       {divider}
       <p>
-        你可以点击「导航栏」的 <strong>blogs</strong> 查看我的技术文章，<strong>repositories</strong>{' '}
+        你可以点击「导航栏」的{' '}
+        <strong>
+          <Link href="/blogs">blogs</Link>
+        </strong>{' '}
+        查看我的技术文章，
+        <strong>
+          {' '}
+          <Link href="/repositories">repositories</Link>
+        </strong>{' '}
         查看我参与的开源项目
       </p>
       {divider}
       <p>
-        你可以点击「底部链接」在 <strong>GitHub</strong>、<strong>掘金</strong> 和 <strong>知乎</strong> 找到我
+        你可以点击「导航栏」的{' '}
+        <strong>
+          {' '}
+          <a className="external" href="https://doubao.com/bot/xXitYeFs" target="_blank">
+            chat
+          </a>
+        </strong>{' '}
+        与<del>我</del>（Agent）对话
+      </p>
+      {divider}
+      <p>
+        你可以点击「底部链接」在 <strong>GitHub</strong>、<strong>掘金</strong>、<strong>微信公众号</strong> 和{' '}
+        <strong>知乎</strong> 找到我
       </p>
       {divider}
       <p>

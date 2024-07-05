@@ -46,6 +46,9 @@ function Home(): JSX.Element {
         <ListItem title="掘金" link={`https://juejin.cn/user/${JuejinUserID}`} external>
           <Icon icon={classNames(styles.icon, styles.gray)} slot="media" f7="paperplane_fill" />
         </ListItem>
+        <ListItem title="微信公众号" link="https://mp.weixin.qq.com/s/uXGX7jaTs7ULjgWnET3nEg" external>
+          <Icon icon={classNames(styles.icon, styles.gray)} slot="media" f7="paperplane_fill" />
+        </ListItem>
         <ListItem title="知乎" link={`https://www.zhihu.com/people/${ZhihuUserName}`} external>
           <Icon icon={classNames(styles.icon, styles.gray)} slot="media" f7="number_circle_fill" />
         </ListItem>

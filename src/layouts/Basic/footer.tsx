@@ -24,6 +24,7 @@ function Footer(): JSX.Element {
       <div className={styles.contact}>
         <Link url={`https://github.com/${GitHubUserName}`} title="GitHub" />
         <Link url={`https://juejin.cn/user/${JuejinUserID}`} title="Juejin" />
+        <Link url="https://mp.weixin.qq.com/s/uXGX7jaTs7ULjgWnET3nEg" title="WeChat" />
         <Link url={`https://www.zhihu.com/people/${ZhihuUserName}`} title="Zhihu" />
       </div>
     </footer>

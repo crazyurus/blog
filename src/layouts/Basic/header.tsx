@@ -21,8 +21,11 @@ function Header(props: Props): JSX.Element {
       <div className={classNames(styles.navbar, 'flex-shrink-0')}>
         <Link href="/">/home</Link>
         <Link href="/blogs">/blogs</Link>
-        <Link href="/repositories">/repositories</Link>
         <Link href="/bots">/bots</Link>
+        <a href="https://doubao.com/bot/xXitYeFs" target="_blank">
+          /chat
+        </a>
+        <Link href="/repositories">/repositories</Link>
         {neteaseMusicPlaylistID && <Link href="/music">/music</Link>}
         {TMDBAccountID && <Link href="/movies">/movies</Link>}
         <Link href="/friends">/friends</Link>
