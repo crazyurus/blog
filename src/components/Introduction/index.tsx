@@ -35,7 +35,7 @@ function Introduction(props: Props): JSX.Element {
       </p>
       {divider}
       <p>
-        你可以点击「导航栏」的{' '}
+        你可以点击
         <strong>
           {' '}
           <a className="external" href="https://doubao.com/bot/xXitYeFs" target="_blank">
