@@ -55,3 +55,18 @@ export function initBackground() {
     cancelAnimationFrame(raf);
   };
 }
+
+export function initCoze() {
+  const element = document.getElementById('coze') as HTMLDivElement;
+
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7382578063735144483'
+    },
+    componentProps: {
+      title: '与我对话',
+      icon: '//crazyurus.com/avatar.png'
+    },
+    el: element
+  });
+}

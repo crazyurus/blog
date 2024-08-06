@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html > body {
   margin: 0;
   font-size: 14px;
-  font-family: monospace;
+  font-family: Consolas, monospace;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -16,3 +16,10 @@
     min-height: calc(100vh - 221px);
   }
 }
+
+.float {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  z-index: 100;
+}

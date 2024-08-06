@@ -35,14 +35,7 @@ function Introduction(props: Props): JSX.Element {
       </p>
       {divider}
       <p>
-        你可以点击
-        <strong>
-          {' '}
-          <a className="external" href="https://doubao.com/bot/xXitYeFs" target="_blank">
-            chat
-          </a>
-        </strong>{' '}
-        与<del>我</del>（Agent）对话
+        你可以点击右下角「悬浮按钮」与<del>我</del>（Agent）对话
       </p>
       {divider}
       <p>
