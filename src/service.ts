@@ -24,7 +24,8 @@ export async function getBlogList(): Promise<Blog[]> {
 
 export async function getBlogDetail(id: string): Promise<BlogDetail> {
   const response = await http.post('https://api.juejin.cn/content_api/v1/article/detail', {
-    article_id: id
+    article_id: id,
+    forbid_count: true
   });
   const { article_info: article, author_user_info: author } = response.data;
 
