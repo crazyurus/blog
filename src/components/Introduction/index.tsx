@@ -11,7 +11,7 @@ function Introduction(props: Props): JSX.Element {
   return (
     <Fragment>
       <p>
-        我是 <strong>Crazy Urus</strong>，是一名「前端/全栈开发工程师」，毕业于「武汉理工大学」
+        我是 <strong>Cr4zy Uru5</strong>，是一名「前端/全栈开发工程师」，毕业于「武汉理工大学」
       </p>
       {divider}
       <p>

@@ -1,15 +1,15 @@
 {
-  "name": "Crazy Urus",
-  "short_name": "Crazy Urus",
-  "description": "Crazy Urus personal website",
-  "start_url": "https://crazyurus.cn",
+  "name": "Cr4zy Uru5",
+  "short_name": "Cr4zy Uru5",
+  "description": "Cr4zy Uru5 personal website",
+  "start_url": "https://crazyurus.com",
   "orientation": "portrait",
   "display": "minimal-ui",
   "background_color": "#000000",
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "https://crazyurus.cn/avatar.png",
+      "src": "https://crazyurus.com/avatar.png",
       "sizes": "256x256",
       "type": "image/png"
     }
