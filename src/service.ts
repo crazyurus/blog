@@ -1,3 +1,5 @@
+import bots from '../constants/bots';
+import friends from '../constants/friends';
 import type { Blog, BlogDetail, Bot, Friend, Movie, MovieDetail, Music, Repository } from './types';
 import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
 import * as http from './utils/request';
@@ -91,7 +93,7 @@ export async function getMovieList(): Promise<Movie[]> {
   const accountID = process.env.NEXT_PUBLIC_TMDB_ACCOUNT_ID;
   const apiKey = process.env.TMDB_API_KEY;
   const response = await http.get(
-    `https://try.readme.io/api.themoviedb.org/3/account/${accountID}/favorite/movies?language=zh-CN&page=1&sort_by=created_at.desc`,
+    `https://api.themoviedb.org/3/account/${accountID}/favorite/movies?language=zh-CN&page=1&sort_by=created_at.desc`,
     {
       Authorization: `Bearer ${apiKey}`,
       Origin: 'https://developer.themoviedb.org'
@@ -117,8 +119,8 @@ export async function getMovieDetail(id: string): Promise<MovieDetail> {
     Origin: 'https://developer.themoviedb.org'
   };
   const [response, creditResponse] = await Promise.all([
-    http.get(`https://try.readme.io/api.themoviedb.org/3/movie/${id}?language=zh-CN`, headers),
-    http.get(`https://try.readme.io/api.themoviedb.org/3/movie/${id}/credits?language=zh-CN`, headers)
+    http.get(`https://api.themoviedb.org/3/movie/${id}?language=zh-CN`, headers),
+    http.get(`https://api.themoviedb.org/3/movie/${id}/credits?language=zh-CN`, headers)
   ]);
 
   return {
@@ -142,25 +144,9 @@ export async function getMovieDetail(id: string): Promise<MovieDetail> {
 }
 
 export async function getBotList(): Promise<Bot[]> {
-  const apiKey = process.env.STRAPI_API_KEY;
-  const response = await http.get('https://strapi.admin.crazyurus.cn/api/bots', {
-    Authorization: `Bearer ${apiKey}`
-  });
-
-  return response.data.map((item: any) => ({
-    id: item.attributes.botID,
-    name: item.attributes.name
-  }));
+  return bots;
 }
 
 export async function getFriendList(): Promise<Friend[]> {
-  const apiKey = process.env.STRAPI_API_KEY;
-  const response = await http.get('https://strapi.admin.crazyurus.cn/api/friends', {
-    Authorization: `Bearer ${apiKey}`
-  });
-
-  return response.data.map((item: any) => ({
-    name: item.attributes.name,
-    url: item.attributes.url
-  }));
+  return friends;
 }
