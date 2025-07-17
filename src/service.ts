@@ -1,6 +1,6 @@
 import bots from '../constants/bots';
 import friends from '../constants/friends';
-import type { Blog, BlogDetail, Bot, Friend, Movie, MovieDetail, Music, Repository } from './types';
+import type { Blog, BlogDetail, Bot, CarBlog, Friend, Movie, MovieDetail, Music, Repository } from './types';
 import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
 import * as http from './utils/request';
 
@@ -149,4 +149,26 @@ export async function getBotList(): Promise<Bot[]> {
 
 export async function getFriendList(): Promise<Friend[]> {
   return friends;
+}
+
+export async function getCarBlogList(): Promise<CarBlog[]> {
+  const bizID = 'MjM5MDQ5MTMyMw==';
+  const response = await http.get(
+    `https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=${bizID}&album_id=4051681233619566601&count=1000&f=json`
+  );
+  const response2 = await http.get(
+    `https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=${bizID}&album_id=4060078334011424793&count=1000&f=json`
+  );
+
+  return response.getalbum_resp.article_list
+    .concat(response2.getalbum_resp.article_list)
+    .sort((a: any, b: any) => b.create_time - a.create_time)
+    .map((item: any) => ({
+      id: item.msgid,
+      title: item.title,
+      url: item.url,
+      time: formatYearAndDate(Number(item.create_time)),
+      date: formatTimestamp(Number(item.create_time)),
+      image: item.cover_img_1_1
+    }));
 }

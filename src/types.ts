@@ -3,13 +3,21 @@ interface Time {
   date: string;
 }
 
-export interface Blog {
+interface BaseBlog {
   id: string;
   title: string;
-  description: string;
-  categories: string[];
   time: Time;
   date: string;
+}
+
+export interface Blog extends BaseBlog {
+  description: string;
+  categories: string[];
+}
+
+export interface CarBlog extends BaseBlog {
+  url: string;
+  image: string;
 }
 
 export interface BlogDetail {

@@ -21,6 +21,7 @@ function Header(props: Props): JSX.Element {
       <div className={classNames(styles.navbar, 'flex-shrink-0')}>
         <Link href="/">/home</Link>
         <Link href="/blogs">/blogs</Link>
+        <Link href="/car">/car</Link>
         <Link href="/repositories">/repositories</Link>
         <Link href="/bots">/bots</Link>
         {neteaseMusicPlaylistID && <Link href="/music">/music</Link>}
