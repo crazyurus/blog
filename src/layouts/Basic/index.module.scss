@@ -10,7 +10,7 @@
 .content {
   min-height: calc(100vh - 242px);
   outline: none;
-  caret-color: theme('colors.green');
+  caret-color: var(--color-green);
 
   &.empty {
     min-height: calc(100vh - 221px);

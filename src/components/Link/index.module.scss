@@ -4,11 +4,11 @@
   align-items: center;
 
   span {
-    color: theme('colors.blue');
+    color: var(--color-blue);
   }
 
   &:hover > span {
-    color: theme('colors.black');
-    background-color: theme('colors.blue');
+    color: var(--color-black);
+    background-color: var(--color-blue);
   }
 }

@@ -1,17 +1,17 @@
 .title {
-  color: theme('colors.blue');
+  color: var(--color-blue);
   font-size: 24px;
   line-height: 2;
   font-weight: bold;
 
   &::before {
-    color: theme('colors.white');
+    color: var(--color-white);
     content: '<';
     margin-right: 4px;
   }
 
   &::after {
-    color: theme('colors.white');
+    color: var(--color-white);
     content: '>';
     margin-left: 4px;
   }
@@ -42,16 +42,16 @@
   }
 
   a {
-    color: theme('colors.green');
+    color: var(--color-green);
 
     &:hover {
-      color: theme('colors.black');
-      background-color: theme('colors.green');
+      color: var(--color-black);
+      background-color: var(--color-green);
     }
   }
 
   pre {
-    border: 1px dashed theme('colors.gray');
+    border: 1px dashed var(--color-gray);
     border-radius: 8px;
     padding: 8px 12px;
     white-space: pre-wrap;
@@ -59,14 +59,14 @@
   }
 
   p code {
-    color: theme('colors.black');
-    background-color: theme('colors.gray');
+    color: var(--color-black);
+    background-color: var(--color-gray);
     padding: 2px 4px;
     border-radius: 2px;
   }
 
   table {
-    border: 1px dashed theme('colors.gray');
+    border: 1px dashed var(--color-gray);
     border-radius: 8px;
     border-collapse: separate;
     width: 100%;
@@ -113,15 +113,15 @@
   justify-content: space-between;
 
   code {
-    color: theme('colors.yellow');
+    color: var(--color-yellow);
   }
 
   a {
-    color: theme('colors.green');
+    color: var(--color-green);
 
     &:hover {
-      color: theme('colors.black');
-      background-color: theme('colors.green');
+      color: var(--color-black);
+      background-color: var(--color-green);
     }
   }
 }

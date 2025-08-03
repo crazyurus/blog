@@ -6,11 +6,11 @@
 .friend {
   display: inline-block;
   line-height: 2;
-  color: theme('colors.green');
+  color: var(--color-green);
 
   &:hover {
-    color: theme('colors.black');
-    background-color: theme('colors.green');
+    color: var(--color-black);
+    background-color: var(--color-green);
   }
 }
 
@@ -22,11 +22,11 @@
   margin-bottom: 24px;
 
   a {
-    color: theme('colors.green');
+    color: var(--color-green);
 
     &:hover {
-      color: theme('colors.black');
-      background-color: theme('colors.green');
+      color: var(--color-black);
+      background-color: var(--color-green);
     }
   }
 }

@@ -9,11 +9,11 @@
   line-height: 2;
 
   a {
-    color: theme('colors.green');
+    color: var(--color-green);
 
     &:hover {
-      color: theme('colors.black');
-      background-color: theme('colors.green');
+      color: var(--color-black);
+      background-color: var(--color-green);
     }
   }
 }

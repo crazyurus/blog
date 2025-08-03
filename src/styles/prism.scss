@@ -2,34 +2,34 @@
   .keyword,
   .property,
   .atrule {
-    color: theme('colors.blue');
+    color: var(--color-blue);
   }
 
   .string,
   .attr-value {
-    color: theme('colors.green');
+    color: var(--color-green);
   }
 
   .class-name,
   .function,
   .builtin {
-    color: theme('colors.yellow');
+    color: var(--color-yellow);
   }
 
   .attr-name {
-    color: theme('colors.pink');
+    color: var(--color-pink);
   }
 
   .attr-equals {
-    color: theme('colors.white');
+    color: var(--color-white);
   }
 
   .comment {
-    color: theme('colors.gray');
+    color: var(--color-gray);
   }
 
   .boolean,
   .number {
-    color: theme('colors.pink');
+    color: var(--color-pink);
   }
 }
