@@ -39,6 +39,9 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'www.themoviedb.org'
+      },
+      {
+        hostname: 'mmbiz.qpic.cn'
       }
     ],
   },

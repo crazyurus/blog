@@ -152,16 +152,19 @@ export async function getFriendList(): Promise<Friend[]> {
 }
 
 export async function getCarBlogList(): Promise<CarBlog[]> {
+  const albumIDs = ['4103003578287964164', '4051681233619566601', '4060078334011424793'];
   const bizID = 'MjM5MDQ5MTMyMw==';
-  const response = await http.get(
-    `https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=${bizID}&album_id=4051681233619566601&count=1000&f=json`
-  );
-  const response2 = await http.get(
-    `https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=${bizID}&album_id=4060078334011424793&count=1000&f=json`
+  const response = await Promise.all(
+    albumIDs.map(id =>
+      http.get(
+        `https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=${bizID}&album_id=${id}&count=1000&f=json`
+      )
+    )
   );
 
-  return response.getalbum_resp.article_list
-    .concat(response2.getalbum_resp.article_list)
+  return response
+    .map(item => item.getalbum_resp.article_list)
+    .flat()
     .sort((a: any, b: any) => b.create_time - a.create_time)
     .map((item: any) => ({
       id: item.msgid,

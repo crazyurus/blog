@@ -26,8 +26,9 @@ function CarBlogs(): JSX.Element {
             link={item.url}
             external
             title={item.title}
-            subtitle={`${item.time.year}-${item.time.date}`}
-          />
+            subtitle={`${item.time.year}-${item.time.date}`}>
+            <Image alt={item.title} slot="media" style={{ borderRadius: 8 }} src={item.image} width={80} height={80} />
+          </ListItem>
         ))}
       </List>
     </Page>
