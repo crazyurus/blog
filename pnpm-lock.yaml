@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@vercel/analytics':
         specifier: ^1.5.0
-        version: 1.5.0(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))(react@18.2.0)
+        version: 1.5.0(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))(react@19.1.1)
       '@vercel/speed-insights':
         specifier: ^1.2.0
-        version: 1.2.0(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))(react@18.2.0)
+        version: 1.2.0(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))(react@19.1.1)
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
@@ -31,19 +31,19 @@ importers:
         version: 8.3.4
       next:
         specifier: ^15.4.5
-        version: 15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)
+        version: 15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)
       next-middlewares:
         specifier: ^1.0.0
-        version: 1.0.0(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))
+        version: 1.0.0(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))
       next-progress:
         specifier: ^2.3.1
-        version: 2.3.1(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))(react@18.2.0)
+        version: 2.3.1(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))(react@19.1.1)
       react:
-        specifier: ^18.2.0
-        version: 18.2.0
+        specifier: ^19.1.1
+        version: 19.1.1
       react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
+        specifier: ^19.1.1
+        version: 19.1.1(react@19.1.1)
       remark:
         specifier: ^15.0.1
         version: 15.0.1
@@ -61,7 +61,7 @@ importers:
         version: 1.2.2
       swr:
         specifier: ^2.3.4
-        version: 2.3.4(react@18.2.0)
+        version: 2.3.4(react@19.1.1)
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
@@ -85,11 +85,11 @@ importers:
         specifier: ^20.6.2
         version: 20.6.2
       '@types/react':
-        specifier: ^18.2.21
-        version: 18.2.21
+        specifier: ^19.1.9
+        version: 19.1.9
       '@types/react-dom':
-        specifier: ^18.2.7
-        version: 18.2.7
+        specifier: ^19.1.7
+        version: 19.1.7(@types/react@19.1.9)
       '@types/remark-prism':
         specifier: ^1.3.4
         version: 1.3.4
@@ -116,7 +116,7 @@ importers:
         version: 16.1.4
       next-sitemap:
         specifier: ^4.2.3
-        version: 4.2.3(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))
+        version: 4.2.3(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))
       postcss:
         specifier: ^8.4.29
         version: 8.4.29
@@ -844,23 +844,19 @@ packages:
   '@types/normalize-package-data@2.4.1':
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
 
-  '@types/prop-types@15.7.5':
-    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+  '@types/react-dom@19.1.7':
+    resolution: {integrity: sha512-i5ZzwYpqjmrKenzkoLM2Ibzt6mAsM7pxB6BCIouEVVmgiqaMj1TjaK7hnA36hbW5aZv20kx7Lw6hWzPWg0Rurw==}
+    peerDependencies:
+      '@types/react': ^19.0.0
 
-  '@types/react-dom@18.2.7':
-    resolution: {integrity: sha512-GRaAEriuT4zp9N4p1i8BDBYmEyfo+xQ3yHjJU4eiK5NDa1RmUZG+unZABUTK4/Ox/M+GaHwb6Ow8rUITrtjszA==}
-
-  '@types/react@18.2.21':
-    resolution: {integrity: sha512-neFKG/sBAwGxHgXiIxnbm3/AAVQ/cMRS93hvBpg8xYRbeQSPVABp9U2bRnPf0iI4+Ucdv3plSxKK+3CW2ENJxA==}
+  '@types/react@19.1.9':
+    resolution: {integrity: sha512-WmdoynAX8Stew/36uTSVMcLJJ1KRh6L3IZRx1PZ7qJtBqT3dYTgyDTx8H1qoRghErydW7xw9mSJ3wS//tCRpFA==}
 
   '@types/remark-prism@1.3.4':
     resolution: {integrity: sha512-nwb0sLwWuUD2DObMkxFtSfPFVA3frkyJRzDy9qfyv0Flq234p3FOlpRpaq64YdDX6fJ+snj3v2VZdneTBG/NiQ==}
 
   '@types/rss@0.0.32':
     resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
-
-  '@types/scheduler@0.16.2':
-    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
 
   '@types/unist@2.0.6':
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
@@ -1199,11 +1195,6 @@ packages:
   browser-process-hrtime@1.0.0:
     resolution: {integrity: sha512-9o5UecI3GhkpM6DrXr69PblIuWxPKk9Y0jHBRhdocZ2y7YECBFCsHm79Pr3OyR2AvjhDkabFJaDJMYRazHgsow==}
 
-  browserslist@4.22.2:
-    resolution: {integrity: sha512-0UgcrvQmBDvZHFGdYUehrCNIazki7/lUP3kkoi/r3YB2amZbFM9J43ZRkJTXBUZK4gmx56+Sqk9+Vs9mwZx9+A==}
-    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
-    hasBin: true
-
   browserslist@4.25.1:
     resolution: {integrity: sha512-KGj0KoOMXLpSNkkEI6Z6mShmQy0bc1I+T7K9N81k4WWMrfz+6fQ6es80B/YLAeRoKvjYE1YSHHOW1qe9xIVzHw==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -1527,9 +1518,6 @@ packages:
   dot-prop@5.3.0:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
-
-  electron-to-chromium@1.4.616:
-    resolution: {integrity: sha512-1n7zWYh8eS0L9Uy+GskE0lkBUNK83cXTVJI0pU3mGprFsbfSdAc15VTFbo+A+Bq4pwstmL30AVcEU3Fo463lNg==}
 
   electron-to-chromium@1.5.194:
     resolution: {integrity: sha512-SdnWJwSUot04UR51I2oPD8kuP2VI37/CADR1OHsFOUzZIvfWJBO6q11k5P/uKNyTT3cdOsnyjkrZ+DDShqYqJA==}
@@ -2835,9 +2823,6 @@ packages:
   node-addon-api@7.1.1:
     resolution: {integrity: sha512-5m3bsyrjFWE1xf7nz7YXdN4udnVtXK6/Yfgn5qnahL6bCkf2yKt4k3nuTKAtT4r3IG8JNR2ncsIMdZuAzJjHQQ==}
 
-  node-releases@2.0.14:
-    resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
-
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
 
@@ -3093,16 +3078,16 @@ packages:
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
 
-  react-dom@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  react-dom@19.1.1:
+    resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
     peerDependencies:
-      react: ^18.2.0
+      react: ^19.1.1
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
-  react@18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+  react@19.1.1:
+    resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
 
   read-pkg-up@7.0.1:
@@ -3256,8 +3241,8 @@ packages:
     resolution: {integrity: sha512-5LBh1Tls8c9xgGjw3QrMwETmTMVk0oFgvrFSvWx62llR2hcEInrKNZ2GZCCuuy2lvWrdl5jhbpeqc5hRYKFOcw==}
     engines: {node: '>=10'}
 
-  scheduler@0.23.0:
-    resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
+  scheduler@0.26.0:
+    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
 
   schema-utils@3.1.1:
     resolution: {integrity: sha512-Y5PQxS4ITlC+EahLuXaY86TXfR7Dc5lw294alXOq86JAHCihAIZfqv8nNCWvaEJvaC51uN9hbLGeV0cFBdH+Fw==}
@@ -3748,12 +3733,6 @@ packages:
   universalify@2.0.0:
     resolution: {integrity: sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==}
     engines: {node: '>= 10.0.0'}
-
-  update-browserslist-db@1.0.13:
-    resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
-    hasBin: true
-    peerDependencies:
-      browserslist: '>= 4.21.0'
 
   update-browserslist-db@1.1.3:
     resolution: {integrity: sha512-UxhIZQ+QInVdunkDAaiazvvT/+fXL5Osr0JZlJulepYu6Jd7qJtDZjlur0emRlT71EN3ScPoE7gvsuIKKNavKw==}
@@ -4571,16 +4550,12 @@ snapshots:
 
   '@types/normalize-package-data@2.4.1': {}
 
-  '@types/prop-types@15.7.5': {}
-
-  '@types/react-dom@18.2.7':
+  '@types/react-dom@19.1.7(@types/react@19.1.9)':
     dependencies:
-      '@types/react': 18.2.21
+      '@types/react': 19.1.9
 
-  '@types/react@18.2.21':
+  '@types/react@19.1.9':
     dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
       csstype: 3.1.1
 
   '@types/remark-prism@1.3.4':
@@ -4592,8 +4567,6 @@ snapshots:
       - supports-color
 
   '@types/rss@0.0.32': {}
-
-  '@types/scheduler@0.16.2': {}
 
   '@types/unist@2.0.6': {}
 
@@ -4643,15 +4616,15 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/analytics@1.5.0(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))(react@18.2.0)':
+  '@vercel/analytics@1.5.0(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))(react@19.1.1)':
     optionalDependencies:
-      next: 15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)
-      react: 18.2.0
+      next: 15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)
+      react: 19.1.1
 
-  '@vercel/speed-insights@1.2.0(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))(react@18.2.0)':
+  '@vercel/speed-insights@1.2.0(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))(react@19.1.1)':
     optionalDependencies:
-      next: 15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)
-      react: 18.2.0
+      next: 15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)
+      react: 19.1.1
 
   '@webassemblyjs/ast@1.11.6':
     dependencies:
@@ -4928,13 +4901,6 @@ snapshots:
       fill-range: 7.1.1
 
   browser-process-hrtime@1.0.0: {}
-
-  browserslist@4.22.2:
-    dependencies:
-      caniuse-lite: 1.0.30001731
-      electron-to-chromium: 1.4.616
-      node-releases: 2.0.14
-      update-browserslist-db: 1.0.13(browserslist@4.22.2)
 
   browserslist@4.25.1:
     dependencies:
@@ -5220,8 +5186,6 @@ snapshots:
   dot-prop@5.3.0:
     dependencies:
       is-obj: 2.0.0
-
-  electron-to-chromium@1.4.616: {}
 
   electron-to-chromium@1.5.194: {}
 
@@ -6920,34 +6884,34 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-middlewares@1.0.0(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)):
+  next-middlewares@1.0.0(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)):
     dependencies:
-      next: 15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)
+      next: 15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)
       path-to-regexp: 6.2.1
 
-  next-progress@2.3.1(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2))(react@18.2.0):
+  next-progress@2.3.1(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2))(react@19.1.1):
     dependencies:
-      next: 15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)
+      next: 15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)
       nprogress: 0.2.0
-      react: 18.2.0
+      react: 19.1.1
 
-  next-sitemap@4.2.3(next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)):
+  next-sitemap@4.2.3(next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)):
     dependencies:
       '@corex/deepmerge': 4.0.43
       '@next/env': 13.4.12
       fast-glob: 3.3.1
       minimist: 1.2.8
-      next: 15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2)
+      next: 15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2)
 
-  next@15.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.89.2):
+  next@15.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)(sass@1.89.2):
     dependencies:
       '@next/env': 15.4.5
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001731
       postcss: 8.4.31
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.6(react@18.2.0)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      styled-jsx: 5.1.6(react@19.1.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.4.5
       '@next/swc-darwin-x64': 15.4.5
@@ -6965,8 +6929,6 @@ snapshots:
 
   node-addon-api@7.1.1:
     optional: true
-
-  node-releases@2.0.14: {}
 
   node-releases@2.0.19: {}
 
@@ -7212,17 +7174,14 @@ snapshots:
       schema-utils: 3.1.1
       webpack: 5.89.0
 
-  react-dom@18.2.0(react@18.2.0):
+  react-dom@19.1.1(react@19.1.1):
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.0
+      react: 19.1.1
+      scheduler: 0.26.0
 
   react-is@16.13.1: {}
 
-  react@18.2.0:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.1.1: {}
 
   read-pkg-up@7.0.1:
     dependencies:
@@ -7451,9 +7410,7 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  scheduler@0.23.0:
-    dependencies:
-      loose-envify: 1.4.0
+  scheduler@0.26.0: {}
 
   schema-utils@3.1.1:
     dependencies:
@@ -7690,10 +7647,10 @@ snapshots:
 
   style-search@0.1.0: {}
 
-  styled-jsx@5.1.6(react@18.2.0):
+  styled-jsx@5.1.6(react@19.1.1):
     dependencies:
       client-only: 0.0.1
-      react: 18.2.0
+      react: 19.1.1
 
   stylelint-config-recommended-scss@13.0.0(postcss@8.4.29)(stylelint@15.10.3):
     dependencies:
@@ -7798,11 +7755,11 @@ snapshots:
 
   swiper@10.3.1: {}
 
-  swr@2.3.4(react@18.2.0):
+  swr@2.3.4(react@19.1.1):
     dependencies:
       dequal: 2.0.3
-      react: 18.2.0
-      use-sync-external-store: 1.5.0(react@18.2.0)
+      react: 19.1.1
+      use-sync-external-store: 1.5.0(react@19.1.1)
 
   symbol-tree@3.2.4: {}
 
@@ -7961,8 +7918,8 @@ snapshots:
 
   typeit-react@2.7.0:
     dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
       typeit: 8.8.7
 
   typeit@8.8.7:
@@ -8051,12 +8008,6 @@ snapshots:
 
   universalify@2.0.0: {}
 
-  update-browserslist-db@1.0.13(browserslist@4.22.2):
-    dependencies:
-      browserslist: 4.22.2
-      escalade: 3.1.1
-      picocolors: 1.1.1
-
   update-browserslist-db@1.1.3(browserslist@4.25.1):
     dependencies:
       browserslist: 4.25.1
@@ -8072,9 +8023,9 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  use-sync-external-store@1.5.0(react@18.2.0):
+  use-sync-external-store@1.5.0(react@19.1.1):
     dependencies:
-      react: 18.2.0
+      react: 19.1.1
 
   util-deprecate@1.0.2: {}
 
@@ -8150,7 +8101,7 @@ snapshots:
       '@webassemblyjs/wasm-parser': 1.11.6
       acorn: 8.11.3
       acorn-import-assertions: 1.9.0(acorn@8.11.3)
-      browserslist: 4.22.2
+      browserslist: 4.25.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.18.2
       es-module-lexer: 1.4.1
