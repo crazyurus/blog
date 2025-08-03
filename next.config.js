@@ -21,7 +21,6 @@ const nextConfig = {
     dirs: ['src'],
   },
   reactStrictMode: false,
-  swcMinify: true,
   output: 'standalone',
   images: {
     remotePatterns: [

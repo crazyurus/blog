@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import './color';
+@use 'tailwindcss';
+@use './color';
 
 html > body {
   margin: 0;
@@ -31,4 +31,13 @@ a::selection {
 
 .page[data-name='movie'] {
   background-color: #fff;
+}
+
+.blank {
+  color: var(--color-blue);
+  background-color: var(--color-yellow);
+  border-color: var(--color-gray);
+  outline-color: var(--color-pink);
+  text-decoration-color: var(--color-purple);
+  border-left-color: var(--color-red);
 }
