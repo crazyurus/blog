@@ -26,7 +26,7 @@ function Layout(props: PropsWithChildren<Props>): JSX.Element {
     return '#b1e969';
   }, []);
 
-  useEffect(() => initBackground(colorGreen), []);
+  useEffect(() => initBackground(colorGreen), [colorGreen]);
 
   return (
     <Fragment>
