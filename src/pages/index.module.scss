@@ -1,10 +1,13 @@
 .logo {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
-  zoom: 0.5;
   cursor: default;
   user-select: none;
-  margin-bottom: 48px;
+  margin: 36px 0;
+
+  span {
+    color: var(--color-green);
+  }
 }
 
 .content {

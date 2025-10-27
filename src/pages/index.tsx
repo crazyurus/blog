@@ -8,7 +8,7 @@ import logo from './logo.txt';
 function Home(): JSX.Element {
   return (
     <div>
-      <pre className={styles.logo}>{logo}</pre>
+      <pre className={styles.logo} dangerouslySetInnerHTML={{ __html: logo.replaceAll('█', '<span>█</span>') }} />
       <div className={styles.content}>
         <TypeIt
           element="div"
