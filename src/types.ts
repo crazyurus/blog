@@ -11,6 +11,8 @@ interface BaseBlog {
 }
 
 export interface Blog extends BaseBlog {
+  wordCount: number;
+  readTime: string;
   description: string;
   categories: string[];
 }

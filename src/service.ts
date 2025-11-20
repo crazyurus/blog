@@ -19,7 +19,9 @@ export async function getBlogList(): Promise<Blog[]> {
       description: item.article_info.brief_content,
       categories: item.tags.map((item: { tag_name: string }) => item.tag_name),
       time: formatYearAndDate(Number(item.article_info.ctime)),
-      date: formatTimestamp(Number(item.article_info.ctime))
+      date: formatTimestamp(Number(item.article_info.ctime)),
+      wordCount: item.article_info.content_count,
+      readTime: item.article_info.read_time
     };
   });
 }
