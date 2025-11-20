@@ -23,7 +23,7 @@ function Layout(props: PropsWithChildren<Props>): JSX.Element {
       return styles.getPropertyValue('--color-green');
     }
 
-    return '#b1e969';
+    return '#00ff41';
   }, []);
 
   useEffect(() => initBackground(colorGreen), [colorGreen]);

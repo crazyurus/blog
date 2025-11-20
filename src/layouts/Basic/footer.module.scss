@@ -1,8 +1,10 @@
 .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px dashed var(--color-gray);
-  margin: 20px auto 16px;
-  padding-top: 8px;
-  text-align: right;
+  margin: 20px 0 16px;
+  padding-top: 16px;
 }
 
 .contact {
