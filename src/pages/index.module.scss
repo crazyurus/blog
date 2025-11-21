@@ -3,7 +3,7 @@
   text-align: center;
   cursor: default;
   user-select: none;
-  margin: 36px 0;
+  margin: 36px 0 48px;
 
   span {
     color: var(--color-green);
@@ -13,6 +13,8 @@
 .content {
   display: block;
   line-height: 2;
+  margin: 0 auto;
+  width: 760px;
 
   a {
     color: var(--color-green);

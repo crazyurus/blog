@@ -35,10 +35,6 @@ function Introduction(props: Props): JSX.Element {
       </p>
       {divider}
       <p>
-        你可以点击右下角「悬浮按钮」与<del>我</del>（Agent）对话
-      </p>
-      {divider}
-      <p>
         你可以点击「底部链接」在 <strong>GitHub</strong>、<strong>掘金</strong>、<strong>微信公众号</strong> 和{' '}
         <strong>知乎</strong> 找到我
       </p>

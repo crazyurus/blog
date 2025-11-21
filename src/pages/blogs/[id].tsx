@@ -1,6 +1,5 @@
 import type { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
-import React, { Fragment } from 'react';
 import { remark } from 'remark';
 import remarkGFM from 'remark-gfm';
 import remarkHtml from 'remark-html';
@@ -28,7 +27,7 @@ function BlogDetail(props: Props): JSX.Element {
   );
 
   return (
-    <Fragment>
+    <div className="my-12">
       <Head>
         <title>{detail.title}</title>
         <meta name="description" content={detail.description} />
@@ -45,7 +44,7 @@ function BlogDetail(props: Props): JSX.Element {
           <code>{detail.count.comment}</code>
         </span>
       </div>
-    </Fragment>
+    </div>
   );
 }
 

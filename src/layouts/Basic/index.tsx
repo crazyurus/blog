@@ -1,15 +1,14 @@
-import classNames from 'classnames';
 import NextProgress from 'next-progress';
-import React, { Fragment, useEffect, useMemo, type PropsWithChildren } from 'react';
+import { useMemo, type PropsWithChildren } from 'react';
 
-import { initBackground } from '../../utils/init';
+import MatrixRain from '@/components/home/MatrixRain';
+
 import Footer from './footer';
 import Header from './header';
 import styles from './index.module.scss';
 
 function Layout(props: PropsWithChildren<unknown>): JSX.Element {
   const { children } = props;
-  const empty = !process.env.NEXT_PUBLIC_MIIT_BEIAN;
   const colorGreen = useMemo(() => {
     if (typeof getComputedStyle === 'function') {
       const styles = getComputedStyle(document.documentElement);
@@ -20,25 +19,18 @@ function Layout(props: PropsWithChildren<unknown>): JSX.Element {
     return '#00ff41';
   }, []);
 
-  useEffect(() => initBackground(colorGreen), [colorGreen]);
-
   return (
-    <Fragment>
+    <div className="min-h-screen w-full relative overflow-x-hidden bg-black selection:bg-green selection:text-black">
       <NextProgress color={colorGreen} />
+      <MatrixRain />
       <div className={styles.scanlines}></div>
       <div className={styles.flicker}></div>
-      <div className={styles.layout}>
+      <div className="flex flex-col h-screen">
         <Header />
-        <main
-          className={classNames(styles.content, {
-            [styles.empty]: empty
-          })}>
-          {children}
-        </main>
+        <main className="flex-grow px-20 overflow-y-auto">{children}</main>
         <Footer />
       </div>
-      <canvas id="canvas" />
-    </Fragment>
+    </div>
   );
 }
 

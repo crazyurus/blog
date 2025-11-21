@@ -6,7 +6,6 @@ import React, { Fragment } from 'react';
 import Layout from '../layouts/Basic';
 
 import '../styles/global.scss';
-import '../styles/canvas.scss';
 import '../styles/prism.scss';
 
 const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;

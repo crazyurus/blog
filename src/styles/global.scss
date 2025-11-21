@@ -2,16 +2,33 @@
 @use './color';
 @use './glitch';
 
-html > body {
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #008f11;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff41;
+}
+
+body {
   margin: 0;
   font-size: 14px;
   font-family: Consolas, monospace;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--color-white) !important;
+  color: var(--color-white);
   background-color: var(--color-black);
-  overflow-y: overlay;
   cursor: text;
 }
 
@@ -32,13 +49,4 @@ a::selection {
 
 .page[data-name='movie'] {
   background-color: #fff;
-}
-
-.blank {
-  color: var(--color-blue);
-  background-color: var(--color-yellow);
-  border-color: var(--color-gray);
-  outline-color: var(--color-pink);
-  text-decoration-color: var(--color-purple);
-  border-left-color: var(--color-red);
 }

@@ -51,7 +51,7 @@ function RepositoryList(props: Props): JSX.Element {
                   </a>
                   {item.homepage ? (
                     <a
-                      className="w-full flex items-center justify-center gap-2 border border-gray-700 hover:border-blue hover:text-blue text-gray-400 py-2 text-xs font-mono transition-all"
+                      className="w-full flex items-center justify-center gap-2 border border-gray-700 hover:border-green hover:text-green text-gray-400 py-2 text-xs font-mono transition-all"
                       href={item.homepage}
                       target="_blank"
                       rel="noopener noreferrer">

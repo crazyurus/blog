@@ -10,13 +10,13 @@ function WhoamiPage(): JSX.Element {
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-green to-blue opacity-75 blur group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
           <div className="relative bg-black aspect-square flex items-center justify-center border border-green overflow-hidden">
-            <Image src="/avatar.png" width={160} height={160} alt="logo" />
+            <Image src="/avatar.png" width={200} height={200} alt="logo" />
           </div>
         </div>
         <div className="mt-6 space-y-4 font-mono text-sm text-green">
           <div className="flex justify-between border-b border-gray-800 pb-1">
             <span className="text-gray-500">ROLE:</span>
-            <span>Full Stack Engineer</span>
+            <span>Frontend/Full Stack Engineer</span>
           </div>
           <div className="flex justify-between border-b border-gray-800 pb-1">
             <span className="text-gray-500">LOCATION:</span>
@@ -24,11 +24,11 @@ function WhoamiPage(): JSX.Element {
           </div>
           <div className="flex justify-between border-b border-gray-800 pb-1">
             <span className="text-gray-500">UNIVERSITY:</span>
-            <span className="whitespace-nowrap">Wuhan University of Technology</span>
+            <span>Wuhan University of Technology</span>
           </div>
           <div className="flex justify-between border-b border-gray-800 pb-1">
             <span className="text-gray-500">EMAIL:</span>
-            <span className="whitespace-nowrap">crazyurus@vip.qq.com</span>
+            <span>crazyurus@vip.qq.com</span>
           </div>
         </div>
       </div>
@@ -44,6 +44,10 @@ function WhoamiPage(): JSX.Element {
             <span className="text-blue"> &gt; </span>
             我对 <strong>React</strong>、<strong>小程序</strong>、<strong>Node.js</strong>、<strong>工程化</strong>、
             <strong>AI 大模型</strong> 和 <strong>Web 安全</strong> 等领域感兴趣
+          </p>
+          <p>
+            <span className="text-blue"> &gt; </span>
+            你可以点击「底部链接」在 GitHub、掘金、微信公众号 和 知乎 找到我
           </p>
           <p>
             <span className="text-blue"> &gt; </span>

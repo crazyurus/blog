@@ -1,12 +1,15 @@
 import TypeIt from 'typeit-react';
 
-import { Introduction } from '../components';
+import Introduction from '../components/Introduction';
 import styles from './index.module.scss';
 import logo from './logo.txt';
 
 function Home(): JSX.Element {
   return (
     <div>
+      <div className="space-y-2 animate-pulse text-center mt-6">
+        <p className="text-[#008f11] font-mono text-sm">root@crazyurus:~# ./init_sequence.sh</p>
+      </div>
       <pre className={styles.logo} dangerouslySetInnerHTML={{ __html: logo.replaceAll('█', '<span>█</span>') }} />
       <div className={styles.content}>
         <TypeIt
