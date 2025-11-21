@@ -1,8 +1,7 @@
-import React from 'react';
+import { Play } from 'lucide-react';
 
 import { getMusicList } from '../../service';
 import type { Music } from '../../types';
-import styles from './index.module.scss';
 
 interface Props {
   title: string;
@@ -13,26 +12,28 @@ function MusicList(props: Props): JSX.Element {
   const { music } = props;
 
   return (
-    <div className={styles.section}>
-      <ol className={styles.list}>
-        {music.map(item => (
-          <li key={item.id}>
-            <div className={styles.music}>
-              <span className="flex-shrink-0">{item.time}</span>
-              <a
-                className="flex-shrink-0"
-                href={`https://music.163.com/#/song?id=${item.id}`}
-                target="_blank"
-                rel="noopener noreferrer">
-                {item.name}
-              </a>
-              <span className="flex-grow text-ellipsis whitespace-nowrap overflow-hidden">
-                -- {item.author.join('、')}
-              </span>
+    <div className="bg-dark/80 backdrop-blur border border-[#008f11] p-4 my-12">
+      {music.map((item, index) => (
+        <div key={item.id} className="flex items-center justify-between p-3 hover:bg-white/5 transition-colors group">
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-gray-600 text-sm w-4">{index + 1}</span>
+            <a
+              className="text-green hover:text-white transition-colors"
+              href={`https://music.163.com/#/song?id=${item.id}`}
+              target="_blank"
+              rel="noopener noreferrer">
+              <Play size={16} />
+            </a>
+            <div>
+              <div className="font-mono text-sm text-gray-300 group-hover:text-white">{item.name}</div>
+              <div className="text-xs text-gray-500 mt-1">{item.author.join('、')}</div>
             </div>
-          </li>
-        ))}
-      </ol>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="font-mono text-xs text-gray-500">{item.duration}</span>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

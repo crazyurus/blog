@@ -1,7 +1,7 @@
 import bots from '../constants/bots';
 import friends from '../constants/friends';
 import type { Blog, BlogDetail, Bot, CarBlog, Friend, Movie, MovieDetail, Music, Repository } from './types';
-import { formatTime, formatTimestamp, formatYearAndDate } from './utils/format';
+import { formatTime, formatTimestamp, formatYearAndDate, getTimeDuration } from './utils/format';
 import * as http from './utils/request';
 
 export async function getBlogList(): Promise<Blog[]> {
@@ -84,7 +84,8 @@ export async function getMusicList(): Promise<Music[]> {
       name: item.name,
       author: item.ar.map((r: any) => r.name),
       image: item.al.picUrl,
-      time: formatTime(item.publishTime)
+      time: formatTime(item.publishTime),
+      duration: getTimeDuration(item.dt)
     };
   });
 }

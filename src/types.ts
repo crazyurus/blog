@@ -53,6 +53,7 @@ export interface Music {
   author: string[];
   image: string;
   time: string;
+  duration: string;
 }
 
 export interface Movie {
