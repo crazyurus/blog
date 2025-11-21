@@ -38,7 +38,7 @@ function BlogList(props: Props): JSX.Element {
                 </div>
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-500 font-mono">
                   <div className="flex items-center gap-2">
-                    <Calendar size={12} /> {item.time.year}-{item.time.date}
+                    <Calendar size={12} /> {item.time}
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock size={12} />共 {item.wordCount} 字，阅读需要 {item.readTime}
@@ -58,7 +58,7 @@ export async function getServerSideProps(): Promise<{ props: Props }> {
 
   return {
     props: {
-      title: 'Blogs',
+      title: 'Tech Blogs',
       blogs
     }
   };

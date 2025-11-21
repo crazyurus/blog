@@ -1,7 +1,7 @@
 import bots from '../constants/bots';
 import friends from '../constants/friends';
 import type { Blog, BlogDetail, Bot, CarBlog, Friend, Movie, MovieDetail, Music, Repository } from './types';
-import { formatTime, formatTimestamp, formatYearAndDate, getTimeDuration } from './utils/format';
+import { formatTime, formatTimestamp, getTimeDuration } from './utils/format';
 import * as http from './utils/request';
 
 export async function getBlogList(): Promise<Blog[]> {
@@ -18,8 +18,7 @@ export async function getBlogList(): Promise<Blog[]> {
       title: item.article_info.title,
       description: item.article_info.brief_content,
       categories: item.tags.map((item: { tag_name: string }) => item.tag_name),
-      time: formatYearAndDate(Number(item.article_info.ctime)),
-      date: formatTimestamp(Number(item.article_info.ctime)),
+      time: formatTimestamp(Number(item.article_info.ctime) * 1000),
       wordCount: item.article_info.content_count,
       readTime: item.article_info.read_time
     };
@@ -61,7 +60,7 @@ export async function getRepositoryList(): Promise<Repository[]> {
         id: item.id,
         name: item.name,
         description: item.description,
-        time: formatYearAndDate(item.created_at),
+        time: formatTime(item.created_at),
         url: item.html_url,
         language: item.language,
         archived: item.archived,
@@ -88,7 +87,7 @@ export async function getMusicList(): Promise<Music[]> {
       name: item.name,
       author: item.ar.map((r: any) => r.name),
       image: item.al.picUrl,
-      time: formatTime(item.publishTime),
+      time: formatTimestamp(item.publishTime),
       duration: getTimeDuration(item.dt)
     };
   });
@@ -178,8 +177,8 @@ export async function getCarBlogList(): Promise<CarBlog[]> {
       id: item.msgid,
       title: item.title,
       url: item.url,
-      time: formatYearAndDate(Number(item.create_time)),
-      date: formatTimestamp(Number(item.create_time)),
+      type: item.item_show_type === '8' ? 'image' : 'text',
+      time: formatTimestamp(Number(item.create_time) * 1000),
       image: item.cover_img_1_1
     }));
 }

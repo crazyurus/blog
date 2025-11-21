@@ -25,7 +25,7 @@ function Repository(): JSX.Element {
             link={item.url}
             external
             title={item.name}
-            subtitle={`${item.time.year}-${item.time.date}`}
+            subtitle={item.time}
             text={item.description}
           />
         ))}

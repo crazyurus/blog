@@ -3,27 +3,14 @@ import duration from 'dayjs/plugin/duration';
 
 dayjs.extend(duration);
 
-export function formatYearAndDate(timestamp: number | string): {
-  year: number;
-  date: string;
-} {
-  const value = typeof timestamp === 'string' ? timestamp : timestamp * 1000;
-  const time = dayjs(value);
+const format = 'YYYY-MM-DD';
 
-  return {
-    year: time.year(),
-    date: time.format('MM-DD')
-  };
+export function formatTime(time: string): string {
+  return dayjs(time).format(format);
 }
 
-export function formatTime(time: string | number): string {
-  return dayjs(time).format('YYYY-MM-DD');
-}
-
-export function formatTimestamp(timestamp: string | number): string {
-  const value = typeof timestamp === 'string' ? timestamp : timestamp * 1000;
-
-  return dayjs(value).toISOString();
+export function formatTimestamp(timestamp: number): string {
+  return dayjs(timestamp).format(format);
 }
 
 export function getTimeDuration(time: number): string {

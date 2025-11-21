@@ -24,7 +24,7 @@ function Blog(): JSX.Element {
             key={item.id}
             link={`/blogs/${item.id}`}
             title={item.title}
-            subtitle={`${item.time.year}-${item.time.date}`}
+            subtitle={item.time}
             text={item.description}
           />
         ))}

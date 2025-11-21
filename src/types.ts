@@ -1,13 +1,7 @@
-interface Time {
-  year: number;
-  date: string;
-}
-
 interface BaseBlog {
   id: string;
   title: string;
-  time: Time;
-  date: string;
+  time: string;
 }
 
 export interface Blog extends BaseBlog {
@@ -18,6 +12,7 @@ export interface Blog extends BaseBlog {
 }
 
 export interface CarBlog extends BaseBlog {
+  type: 'text' | 'image';
   url: string;
   image: string;
 }
@@ -43,7 +38,7 @@ export interface Repository {
   id: number;
   name: string;
   description: string;
-  time: Time;
+  time: string;
   url: string;
   language: string;
   archived: boolean;
