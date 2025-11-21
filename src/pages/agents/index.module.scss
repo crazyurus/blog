@@ -1,0 +1,12 @@
+.before {
+  margin-bottom: 24px;
+
+  a {
+    color: var(--color-green);
+
+    &:hover {
+      color: var(--color-black);
+      background-color: var(--color-green);
+    }
+  }
+}

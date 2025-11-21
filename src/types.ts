@@ -92,4 +92,5 @@ export interface Friend {
 export interface Bot {
   name: string;
   id: string;
+  enable: boolean;
 }

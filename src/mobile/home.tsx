@@ -28,7 +28,7 @@ function Home(): JSX.Element {
         <ListItem title="仓库" link="/repositories">
           <Icon icon={classNames(styles.icon, styles.orange)} slot="media" f7="square_stack_3d_up_fill" />
         </ListItem>
-        <ListItem title="机器人" link="/bots">
+        <ListItem title="智能体" link="/agents">
           <Icon icon={classNames(styles.icon, styles.purple)} slot="media" f7="ellipses_bubble_fill" />
         </ListItem>
         <ListItem title="音乐" link="/music">

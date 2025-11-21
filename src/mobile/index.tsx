@@ -23,7 +23,7 @@ const routes = [
     asyncComponent: () => import('./repository')
   },
   {
-    path: '/bots',
+    path: '/agents',
     asyncComponent: () => import('./bot')
   },
   {
