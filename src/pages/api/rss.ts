@@ -24,7 +24,7 @@ async function handler(request: NextApiRequest, response: NextApiResponse) {
       author: defaultTitle,
       url: `${manifest.start_url}/blogs/${blog.id}`,
       guid: blog.id.toString(),
-      date: blog.date
+      date: blog.time
     });
   }
 
