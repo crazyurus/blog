@@ -22,10 +22,8 @@ type AppPropsWithLayout = AppProps & {
   };
 };
 
-function getDefaultLayout(page: JSX.Element, pageProps: any): JSX.Element {
-  const { title = defaultTitle } = pageProps;
-
-  return <Layout title={title}>{page}</Layout>;
+function getDefaultLayout(page: JSX.Element): JSX.Element {
+  return <Layout>{page}</Layout>;
 }
 
 function App({ Component, pageProps }: AppPropsWithLayout) {

@@ -11,8 +11,9 @@ function Header(): JSX.Element {
   return (
     <header className={styles.header}>
       <div className={classNames(styles.title, 'flex-grow', 'text-ellipsis', 'whitespace-nowrap', 'overflow-hidden')}>
-        <span className="font-tech text-2xl text-green tracking-tighter group-hover:animate-pulse hidden sm:block">
-          CR4ZY <span className="text-white">URU5</span>
+        <span className="font-tech text-2xl tracking-tighter group-hover:animate-pulse hidden sm:block">
+          <span className="text-green">CR</span>4<span className="text-green">ZY</span> URU
+          <span className="text-green">5</span>
         </span>
       </div>
       <div className={classNames(styles.navbar, 'flex-shrink-0')}>
