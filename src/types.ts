@@ -45,6 +45,10 @@ export interface Repository {
   description: string;
   time: Time;
   url: string;
+  language: string;
+  archived: boolean;
+  topics: string[];
+  homepage: string;
 }
 
 export interface Music {

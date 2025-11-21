@@ -1,66 +1,80 @@
-import React, { Fragment } from 'react';
+import { Github, Link } from 'lucide-react';
+
+import GlitchHeader from '@/components/home/GlitchHeader';
+import TerminalCard from '@/components/home/TerminalCard';
+
 import { getRepositoryList } from '../../service';
 import type { Repository } from '../../types';
-import styles from './index.module.scss';
 
 interface Props {
   title: string;
-  repositories: Record<string, Repository[]>;
+  repositories: Repository[];
 }
 
 function RepositoryList(props: Props): JSX.Element {
-  const { repositories } = props;
-  let total = 1;
+  const { title, repositories } = props;
 
   return (
-    <Fragment>
-      {Object.entries(repositories)
-        .reverse()
-        .map(([year, repositories]) => (
-          <div key={year} className={styles.section}>
-            <div className={styles.title}>
-              {year} ({repositories.length})
-            </div>
-            <ol className={styles.list} start={(total += repositories.length) - repositories.length}>
-              {repositories.map(repository => (
-                <li key={repository.id}>
-                  <div className={styles.repository}>
-                    <span className="flex-shrink-0">{repository.time.date}</span>
-                    <a className="flex-shrink-0" href={repository.url} target="_blank" rel="noopener noreferrer">
-                      {repository.name}
+    <div className="my-12">
+      <GlitchHeader text={title} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {repositories.map(item => (
+          <TerminalCard key={item.id} title={item.language}>
+            <div className="flex flex-col h-full justify-between space-y-4">
+              <div>
+                <div className="flex justify-between items-center mb-2 gap-2">
+                  <h3 className="text-xl font-bold text-white line-clamp-1">{item.name}</h3>
+                  <span
+                    className={`text-[10px] px-2 py-0.5 border ${
+                      item.archived ? 'border-yellow-500 text-yellow-500' : 'border-green-500 text-green-500'
+                    } uppercase`}>
+                    {item.archived ? 'ARCHIVED' : 'ACTIVE'}
+                  </span>
+                </div>
+                <p className="text-gray-400 text-sm line-clamp-2">{item.description}</p>
+              </div>
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {item.topics.map(topic => (
+                    <span key={topic} className="text-xs text-blue font-mono">
+                      [{topic}]
+                    </span>
+                  ))}
+                </div>
+                <div className="flex gap-3">
+                  <a
+                    className="w-full flex items-center justify-center gap-2 border border-gray-700 hover:border-blue hover:text-blue text-gray-400 py-2 text-xs font-mono transition-all"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <Github size={14} /> VIEW REPO
+                  </a>
+                  {item.homepage ? (
+                    <a
+                      className="w-full flex items-center justify-center gap-2 border border-gray-700 hover:border-blue hover:text-blue text-gray-400 py-2 text-xs font-mono transition-all"
+                      href={item.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <Link size={14} /> VIEW WEBSITE
                     </a>
-                    {repository.description && (
-                      <span className="flex-grow text-ellipsis whitespace-nowrap overflow-hidden">
-                        -- {repository.description}
-                      </span>
-                    )}
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
+                  ) : null}
+                </div>
+              </div>
+            </div>
+          </TerminalCard>
         ))}
-    </Fragment>
+      </div>
+    </div>
   );
 }
 
 export async function getServerSideProps(): Promise<{ props: Props }> {
   const repositories = await getRepositoryList();
-  const result: Props['repositories'] = {};
-  const { NEXT_PUBLIC_DEFAULT_TITLE: defaultTitle } = process.env;
-
-  repositories.forEach(item => {
-    if (!result[item.time.year]) {
-      result[item.time.year] = [];
-    }
-
-    result[item.time.year].push(item);
-  });
 
   return {
     props: {
-      title: `${defaultTitle} repositories`,
-      repositories: result
+      title: 'Repositories',
+      repositories
     }
   };
 }

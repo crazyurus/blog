@@ -43,7 +43,7 @@ function MovieList(props: Props): JSX.Element {
                 <div className="text-[10px] text-gray-600 uppercase">Critic Score</div>
               </div>
               <div>
-                <div className="text-cyan text-sm font-mono">{item.count}</div>
+                <div className="text-blue text-sm font-mono">{item.count}</div>
                 <div className="text-[10px] text-gray-600 uppercase">Vote Count</div>
               </div>
             </div>

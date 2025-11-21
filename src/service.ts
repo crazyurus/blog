@@ -62,7 +62,11 @@ export async function getRepositoryList(): Promise<Repository[]> {
         name: item.name,
         description: item.description,
         time: formatYearAndDate(item.created_at),
-        url: item.html_url
+        url: item.html_url,
+        language: item.language,
+        archived: item.archived,
+        topics: item.topics,
+        homepage: item.homepage
       };
     });
   }
