@@ -62,6 +62,7 @@ export interface Movie {
   description: string;
   image: string;
   time: string;
+  count: number;
   rate: number;
 }
 

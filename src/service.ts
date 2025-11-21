@@ -110,6 +110,7 @@ export async function getMovieList(): Promise<Movie[]> {
       description: item.overview.trim(),
       image: TMDB_CDN_URL + item.poster_path,
       time: item.release_date,
+      count: item.vote_count,
       rate: item.vote_average
     };
   });
