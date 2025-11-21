@@ -4,19 +4,16 @@ import React from 'react';
 
 import styles from './header.module.scss';
 
-interface Props {
-  title: string;
-}
-
-function Header(props: Props): JSX.Element {
-  const { title } = props;
+function Header(): JSX.Element {
   const neteaseMusicPlaylistID = process.env.NEXT_PUBLIC_NETEASE_MUSIC_PLAYLIST_ID;
   const TMDBAccountID = process.env.NEXT_PUBLIC_TMDB_ACCOUNT_ID;
 
   return (
     <header className={styles.header}>
       <div className={classNames(styles.title, 'flex-grow', 'text-ellipsis', 'whitespace-nowrap', 'overflow-hidden')}>
-        {title}
+        <span className="font-tech text-2xl text-green tracking-tighter group-hover:animate-pulse hidden sm:block">
+          CR4ZY <span className="text-white">URU5</span>
+        </span>
       </div>
       <div className={classNames(styles.navbar, 'flex-shrink-0')}>
         <Link href="/">/home</Link>

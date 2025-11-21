@@ -9,12 +9,8 @@ import Footer from './footer';
 import Header from './header';
 import styles from './index.module.scss';
 
-interface Props {
-  title: string;
-}
-
-function Layout(props: PropsWithChildren<Props>): JSX.Element {
-  const { title, children } = props;
+function Layout(props: PropsWithChildren<unknown>): JSX.Element {
+  const { children } = props;
   const empty = !process.env.NEXT_PUBLIC_MIIT_BEIAN;
   const colorGreen = useMemo(() => {
     if (typeof getComputedStyle === 'function') {
@@ -38,7 +34,7 @@ function Layout(props: PropsWithChildren<Props>): JSX.Element {
       <div className={styles.scanlines}></div>
       <div className={styles.flicker}></div>
       <div className={styles.layout}>
-        <Header title={title} />
+        <Header />
         <main
           className={classNames(styles.content, {
             [styles.empty]: empty
