@@ -1,9 +1,9 @@
 const cspHeader = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
-  script-src-elem 'self' *.coze.cn;
+  script-src-elem 'self';
   connect-src 'self' *.zijieapi.com;
-  frame-src 'self' *.coze.cn;
+  frame-src 'self';
   style-src 'self' 'unsafe-inline';
   img-src *;
   font-src 'self' data:;

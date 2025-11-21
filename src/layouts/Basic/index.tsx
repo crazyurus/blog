@@ -1,10 +1,8 @@
-import { get } from 'https';
 import classNames from 'classnames';
 import NextProgress from 'next-progress';
-import Script from 'next/script';
 import React, { Fragment, useEffect, useMemo, type PropsWithChildren } from 'react';
 
-import { initBackground, initCoze } from '../../utils/init';
+import { initBackground } from '../../utils/init';
 import Footer from './footer';
 import Header from './header';
 import styles from './index.module.scss';
@@ -27,10 +25,6 @@ function Layout(props: PropsWithChildren<unknown>): JSX.Element {
   return (
     <Fragment>
       <NextProgress color={colorGreen} />
-      <Script
-        src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/cn/index.js"
-        onLoad={initCoze}
-      />
       <div className={styles.scanlines}></div>
       <div className={styles.flicker}></div>
       <div className={styles.layout}>
@@ -41,7 +35,6 @@ function Layout(props: PropsWithChildren<unknown>): JSX.Element {
           })}>
           {children}
         </main>
-        <div className={styles.float} id="coze" title="与我对话" />
         <Footer />
       </div>
       <canvas id="canvas" />
