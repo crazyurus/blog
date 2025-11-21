@@ -35,6 +35,8 @@ function Layout(props: PropsWithChildren<Props>): JSX.Element {
         src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/cn/index.js"
         onLoad={initCoze}
       />
+      <div className={styles.scanlines}></div>
+      <div className={styles.flicker}></div>
       <div className={styles.layout}>
         <Header title={title} />
         <main

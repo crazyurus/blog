@@ -23,3 +23,47 @@
   right: 60px;
   z-index: 100;
 }
+
+/* CRT Scanline Effect */
+.scanlines {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0%),
+    rgba(255, 255, 255, 0%) 50%,
+    rgba(0, 0, 0, 20%) 50%,
+    rgba(0, 0, 0, 20%)
+  );
+  background-size: 100% 4px;
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  animation: scanlineMove 10s linear infinite;
+}
+
+/* CRT Flicker */
+.flicker {
+  animation: flicker 0.15s infinite;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 65, 2%);
+  z-index: 49;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
