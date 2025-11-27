@@ -16,7 +16,7 @@ function MusicList(props: Props): JSX.Element {
   return (
     <div className="my-12">
       <GlitchHeader text={title} />
-      <div className="bg-dark/80 backdrop-blur border border-[#008f11] p-4 my-1">
+      <div className="bg-dark/80 backdrop-blur border border-green-dim p-4 my-1">
         {music.map((item, index) => (
           <div key={item.id} className="flex items-center justify-between p-3 hover:bg-white/5 transition-colors group">
             <div className="flex items-center gap-4">

@@ -21,9 +21,9 @@ function CarBlogList(props: Props): JSX.Element {
         {blogs.map(item => (
           <div
             key={item.id}
-            className="cursor-pointer group relative border border-[#008f11] hover:border-green transition-all duration-300 overflow-hidden">
+            className="cursor-pointer group relative border border-green-dim hover:border-green transition-all duration-300 overflow-hidden">
             {/* Image Container */}
-            <div className="relative h-48 overflow-hidden border-b border-[#008f11]/50">
+            <div className="relative h-48 overflow-hidden border-b border-green-dim/50">
               <div className="absolute inset-0 bg-green/10 z-10 group-hover:bg-transparent transition-colors"></div>
 
               {/* Scanline overlay for image */}

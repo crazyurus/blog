@@ -15,7 +15,7 @@ function GlitchHeader(props: GlitchHeaderProps): JSX.Element {
   };
 
   return (
-    <div className="flex items-end justify-between border-b border-[#008f11] pb-4 mb-8">
+    <div className="flex items-end justify-between border-b border-green-dim pb-4 mb-8">
       <div className={`font-tech font-bold uppercase tracking-widest text-green ${sizeClasses[size]} ${className}`}>
         <span className="glitch-wrapper" data-text={text}>
           {text}

@@ -32,7 +32,7 @@ function AgentList(props: Props): JSX.Element {
             href={`https://www.doubao.com/share?botId=${item.id}`}
             target="_blank"
             rel="noopener noreferrer">
-            <div className="bg-dark border border-[#008f11] hover:border-green p-4 transition-all duration-300 group">
+            <div className="bg-dark border border-green-dim hover:border-green p-4 transition-all duration-300 group">
               <div className="flex items-start justify-between mb-4">
                 <BotIcon size={24} className="text-green" />
                 <div
