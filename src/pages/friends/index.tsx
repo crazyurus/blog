@@ -1,5 +1,4 @@
 import { User } from 'lucide-react';
-import React from 'react';
 
 import GlitchHeader from '@/components/home/GlitchHeader';
 import TerminalCard from '@/components/home/TerminalCard';

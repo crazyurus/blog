@@ -1,5 +1,4 @@
 import { BlockHeader, List, ListItem, Navbar, Page } from 'framework7-react';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { Bot } from '../types';
@@ -11,16 +10,16 @@ interface Response {
   };
 }
 
-function Bot(): JSX.Element {
+function Agent(): JSX.Element {
   const { data } = useSWR<Response>('/api/bots', get);
   const bots = data ? data.data.bots : [];
 
   return (
     <Page name="bots">
-      <Navbar title="机器人" large backLink="首页" />
+      <Navbar title="智能体" large backLink />
       <List dividers strong>
         <BlockHeader>
-          以下 Bot 可在{' '}
+          以下 Agent 可在{' '}
           <a className="external" href="https://www.doubao.com/" target="_blank" rel="noopener noreferrer">
             豆包
           </a>{' '}
@@ -34,4 +33,4 @@ function Bot(): JSX.Element {
   );
 }
 
-export default Bot;
+export default Agent;

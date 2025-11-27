@@ -1,6 +1,5 @@
 import { List, ListItem, Navbar, Page } from 'framework7-react';
 import Image from 'next/image';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { CarBlog } from '../types';
@@ -18,7 +17,7 @@ function CarBlogs(): JSX.Element {
 
   return (
     <Page name="car">
-      <Navbar title="比亚迪用车经验" large backLink="首页" />
+      <Navbar title="比亚迪用车经验" large backLink />
       <List mediaList dividers strong>
         {blogs.map(item => (
           <ListItem

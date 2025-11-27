@@ -1,7 +1,6 @@
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Head, Html, Main, NextScript } from 'next/document';
-import React from 'react';
 
 function Document(): JSX.Element {
   const defaultTitle = process.env.NEXT_PUBLIC_DEFAULT_TITLE;

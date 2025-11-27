@@ -1,7 +1,6 @@
 import classNames from 'classnames';
-import { Page } from 'framework7-react';
+import { Navbar, Page } from 'framework7-react';
 import Image from 'next/image';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { MovieDetail } from '../../types';
@@ -16,11 +15,10 @@ interface Response {
 
 interface Props {
   id: string;
-  f7router: any;
 }
 
 function MovieDetail(props: Props): JSX.Element {
-  const { id, f7router } = props;
+  const { id } = props;
   const { data: movie } = useSWR<Response['data']['movie']>(`/api/movies/${id}`, async (url: string) => {
     const response = await get<Response>(url);
     const { movie } = response.data;
@@ -29,12 +27,12 @@ function MovieDetail(props: Props): JSX.Element {
   });
 
   return (
-    <Page name="movie" noNavbar>
+    <Page name="movie">
       {movie ? (
         <>
           <div className={styles.header} style={{ backgroundImage: `url(${movie.image})` }}>
-            <div className={styles.navbar} onClick={f7router.back.bind(f7router)}>
-              <i className="icon icon-back" />
+            <div className={styles.navbar}>
+              <Navbar backLink />
             </div>
             <div className={styles.content}>
               <div className={styles.title}>{movie.title}</div>

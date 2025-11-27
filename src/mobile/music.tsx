@@ -1,6 +1,5 @@
 import { List, ListItem, Navbar, Page } from 'framework7-react';
 import Image from 'next/image';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { Music } from '../types';
@@ -18,7 +17,7 @@ function Music(): JSX.Element {
 
   return (
     <Page name="music">
-      <Navbar title="喜欢的音乐" large backLink="首页" />
+      <Navbar title="喜欢的音乐" large backLink />
       <List mediaList dividers strong>
         {music.map(item => (
           <ListItem

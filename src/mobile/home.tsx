@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import { Block, BlockTitle, Icon, List, ListItem, Navbar, Page } from 'framework7-react';
-import React from 'react';
 
 import Introduction from '../components/Introduction';
 import styles from './index.module.scss';

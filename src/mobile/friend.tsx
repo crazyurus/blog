@@ -1,5 +1,4 @@
 import { BlockFooter, List, ListItem, Navbar, Page } from 'framework7-react';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { Friend } from '../types';
@@ -17,7 +16,7 @@ function Friend(): JSX.Element {
 
   return (
     <Page name="friends">
-      <Navbar title="朋友" large backLink="首页" />
+      <Navbar title="朋友" large backLink />
       <List dividers strong>
         {friends.map(item => (
           <ListItem key={item.url} title={item.name} link={item.url} external />

@@ -1,5 +1,4 @@
 import { List, ListItem, Navbar, Page } from 'framework7-react';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { Repository } from '../types';
@@ -17,7 +16,7 @@ function Repository(): JSX.Element {
 
   return (
     <Page name="repositories">
-      <Navbar title="GitHub 仓库" large backLink="首页" />
+      <Navbar title="GitHub 仓库" large backLink />
       <List mediaList dividers strong>
         {repositories.map(item => (
           <ListItem

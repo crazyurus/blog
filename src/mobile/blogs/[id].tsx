@@ -1,5 +1,4 @@
 import { Block, BlockTitle, Navbar, Page } from 'framework7-react';
-import React from 'react';
 import { remark } from 'remark';
 import remarkGFM from 'remark-gfm';
 import remarkHtml from 'remark-html';
@@ -33,7 +32,7 @@ function BlogDetail(props: Props): JSX.Element {
 
   return (
     <Page name="blog">
-      <Navbar title={blog?.title} backLink="博客" />
+      <Navbar title={blog?.title} large backLink />
       {blog ? (
         <>
           <BlockTitle medium>{blog.title}</BlockTitle>

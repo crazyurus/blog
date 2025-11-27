@@ -1,5 +1,4 @@
 import { List, ListItem, Navbar, Page } from 'framework7-react';
-import React from 'react';
 import useSWR from 'swr';
 
 import type { Blog } from '../../types';
@@ -17,7 +16,7 @@ function Blog(): JSX.Element {
 
   return (
     <Page name="blogs">
-      <Navbar title="博客" large backLink="首页" />
+      <Navbar title="博客" large backLink />
       <List mediaList dividers strong>
         {blogs.map(item => (
           <ListItem
