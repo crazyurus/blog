@@ -26,7 +26,8 @@ function Movie(): JSX.Element {
             link={`/movies/${item.id}`}
             title={item.title}
             subtitle={item.time}
-            text={item.description}>
+            text={item.description}
+            after={item.rate}>
             <Image alt={item.title} slot="media" style={{ borderRadius: 8 }} src={item.image} width={80} height={120} />
           </ListItem>
         ))}

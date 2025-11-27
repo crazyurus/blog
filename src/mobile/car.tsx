@@ -21,7 +21,13 @@ function CarBlogs(): JSX.Element {
       <Navbar title="比亚迪用车经验" large backLink="首页" />
       <List mediaList dividers strong>
         {blogs.map(item => (
-          <ListItem key={item.id} link={item.url} external title={item.title} subtitle={item.time}>
+          <ListItem
+            key={item.id}
+            link={item.url}
+            external
+            title={item.title}
+            subtitle={item.time}
+            text={item.type === 'image' ? '图文' : '文章'}>
             <Image alt={item.title} slot="media" style={{ borderRadius: 8 }} src={item.image} width={80} height={80} />
           </ListItem>
         ))}

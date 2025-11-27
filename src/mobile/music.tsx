@@ -26,7 +26,8 @@ function Music(): JSX.Element {
             link={`https://y.music.163.com/m/song?id=${item.id}`}
             external
             title={item.name}
-            subtitle={item.author.join('、')}>
+            subtitle={item.author.join('、')}
+            text={item.duration}>
             <Image alt={item.name} slot="media" style={{ borderRadius: 8 }} src={item.image} width={80} height={80} />
           </ListItem>
         ))}

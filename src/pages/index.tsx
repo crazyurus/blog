@@ -8,7 +8,7 @@ function Home(): JSX.Element {
   return (
     <div>
       <div className="space-y-2 animate-pulse text-center mt-6">
-        <p className="text-green-dim font-mono text-sm">root@crazyurus:~# ./init_sequence.sh</p>
+        <p className="text-green-dim font-mono text-sm">cr4zyuru5@crazyurus.com:~# ./init_website.sh</p>
       </div>
       <pre className={styles.logo} dangerouslySetInnerHTML={{ __html: logo.replaceAll('█', '<span>█</span>') }} />
       <div className={styles.content}>
