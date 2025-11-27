@@ -17,9 +17,6 @@ const cspHeader = `
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    dirs: ['src'],
-  },
   reactStrictMode: false,
   output: 'standalone',
   images: {
@@ -45,13 +42,15 @@ const nextConfig = {
       }
     ],
   },
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.txt$/,
-      use: 'raw-loader',
-    })
-
-    return config
+  turbopack: {
+    rules: {
+      '*.txt': [
+        {
+          loaders: ['raw-loader'],
+          as: '*.js',
+        },
+      ],
+    },
   },
   headers() {
     return [
